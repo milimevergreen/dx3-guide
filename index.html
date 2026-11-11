@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>더블크로스 입문 브리핑</title>
+<meta name="description" content="더블크로스 The 3rd Edition을 처음 만나는 TRPG 유저를 위한 비공식 입문 안내">
+<meta name="theme-color" content="#f7f7f7">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='16' height='16' fill='%23cd3131'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/wanteddev/wanted-sans@v1.0.3/packages/wanted-sans/fonts/webfonts/variable/split/WantedSansVariable.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;700&family=Noto+Sans+JP:wght@500;700&display=swap">
+<link rel="stylesheet" href="assets/style.css">
+<link rel="stylesheet" href="assets/pages.css">
+</head>
+<body>
+<header class="top">
+  <a class="brand" href="index.html"><i aria-hidden="true"></i>DX3 입문 브리핑</a>
+  <p class="rights">비공식 팬 사이트입니다. 야노 슌사쿠와 유한회사 F.E.A.R.이 권리를 가진 『더블크로스 The 3rd Edition』의 2차 창작물입니다.</p>
+</header>
+
+<button class="menu-btn" id="menu-btn" type="button" aria-expanded="false" aria-controls="nav" aria-label="메뉴 열기">
+  <span class="menu-roll" aria-hidden="true"><span>메뉴</span><span>닫기</span></span>
+  <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M7 0v14M0 7h14"/></svg>
+</button>
+
+<div class="nav" id="nav" inert>
+  <div class="nav-scrim"></div>
+  <div class="nav-panel">
+    <div class="nav-bg" aria-hidden="true"><i></i><i></i><i></i></div>
+    <svg class="nav-shapes" viewBox="0 0 400 400" fill="none" stroke="#f7f7f7" stroke-width="1.5" aria-hidden="true">
+      <g data-shape="1">
+        <path d="M200 40C290 36 362 110 356 200C350 296 284 362 196 358C104 354 40 290 46 196C52 106 112 44 200 40Z"/>
+        <path d="M204 96C262 96 306 142 300 200C294 262 250 304 196 300C140 296 100 250 106 196C112 140 150 96 204 96Z"/>
+        <path d="M202 150C232 150 252 172 250 200C248 230 226 250 198 248C170 246 152 226 154 198C156 170 174 150 202 150Z"/>
+        <rect x="190" y="190" width="20" height="20" fill="#cd3131" stroke="none"/>
+      </g>
+      <g data-shape="2">
+        <path d="M30 150L370 196V204L30 250Z" fill="#cd3131" stroke="none"/>
+        <rect x="44" y="290" width="16" height="16"/>
+        <rect x="90" y="290" width="16" height="16" fill="#f7f7f7"/>
+        <rect x="136" y="290" width="16" height="16"/>
+        <rect x="182" y="290" width="16" height="16"/>
+        <rect x="228" y="290" width="16" height="16"/>
+        <rect x="274" y="290" width="16" height="16"/>
+        <rect x="320" y="290" width="16" height="16"/>
+      </g>
+      <g data-shape="3">
+        <path d="M200 30L352 160V236L200 370L48 236V160Z"/>
+        <path d="M200 30L282 214L200 266L118 214Z"/>
+        <path d="M118 214L48 236M282 214L352 236M200 266V370"/>
+        <text x="200" y="198" text-anchor="middle" font-size="64" font-weight="800" fill="#f7f7f7" stroke="none">10</text>
+      </g>
+      <g data-shape="4">
+        <path d="M70 60H220V340H70Z"/>
+        <path d="M180 92H330V340H180Z" fill="#141414"/>
+        <path d="M204 132H306M204 158H306M204 184H270"/>
+        <text x="96" y="124" font-size="44" font-weight="800" fill="#f7f7f7" stroke="none">1</text>
+        <text x="282" y="318" font-size="44" font-weight="800" fill="#f7f7f7" stroke="none">2</text>
+      </g>
+      <g data-shape="5">
+        <path d="M60 80h44v44H60zM122 80h44v44h-44zM184 80h44v44h-44zM246 80h44v44h-44zM308 80h44v44h-44z"/>
+        <path d="M60 150h44v44H60zM122 150h44v44h-44zM184 150h44v44h-44zM246 150h44v44h-44zM308 150h44v44h-44z"/>
+        <path d="M60 220h44v44H60zM122 220h44v44h-44zM184 220h44v44h-44zM246 220h44v44h-44zM308 220h44v44h-44z"/>
+        <path d="M60 290h44v44H60zM122 290h44v44h-44zM184 290h44v44h-44z"/>
+        <rect x="184" y="150" width="44" height="44" fill="#f7f7f7"/>
+      </g>
+    </svg>
+
+    <nav class="nav-scroll" aria-label="전체 메뉴">
+      <ul class="nav-list">
+        <li data-shape="1" style="--i:0"><div class="nav-row"><a class="nav-link" href="index.html" aria-current="page"><span class="nav-no">01</span><span class="nav-clip"><span class="nav-word">홈</span></span><span class="nav-dot"></span></a></div></li>
+        <li data-shape="2" style="--i:1"><div class="nav-row"><a class="nav-link" href="guide-1.html"><span class="nav-no">02</span><span class="nav-clip"><span class="nav-word">가이드</span></span><span class="nav-dot"></span></a><button class="nav-toggle" type="button" aria-expanded="false" aria-controls="sub-guide" aria-label="가이드 하위 메뉴"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M7 0v14M0 7h14"/></svg></button></div><div class="nav-sub" id="sub-guide" hidden><ol class="sub-guides"><li><a class="sub-top" href="guide-1.html"><span class="nav-sno">01</span>세계관</a></li><li><a class="sub-top" href="guide-2.html"><span class="nav-sno">02</span>프리플레이 및 캐릭터 작성</a></li><li><a class="sub-top" href="guide-3.html"><span class="nav-sno">03</span>오프닝 페이즈</a></li><li><a class="sub-top" href="guide-4.html"><span class="nav-sno">04</span>미들 페이즈 및 판정</a></li><li><a class="sub-top" href="guide-5.html"><span class="nav-sno">05</span>클라이맥스 페이즈 및 전투</a></li><li><a class="sub-top" href="guide-6.html"><span class="nav-sno">06</span>백트랙 및 엔딩</a></li><li><a class="sub-top" href="guide-7.html"><span class="nav-sno">07</span>첫 세션 준비</a></li></ol></div></li>
+        <li data-shape="3" style="--i:2"><div class="nav-row"><a class="nav-link" href="tool-dice.html"><span class="nav-no">03</span><span class="nav-clip"><span class="nav-word">체험 도구</span></span><span class="nav-dot"></span></a><button class="nav-toggle" type="button" aria-expanded="false" aria-controls="sub-tools" aria-label="체험 도구 하위 메뉴"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M7 0v14M0 7h14"/></svg></button></div><div class="nav-sub" id="sub-tools" hidden><ol class="sub-guides"><li><a class="sub-top" href="tool-dice.html"><span class="nav-sno">01</span>판정 다이스 체험</a></li><li><a class="sub-top" href="tool-syndrome.html"><span class="nav-sno">02</span>신드롬 조합 탐색</a></li></ol></div></li>
+        <li data-shape="5" style="--i:3"><div class="nav-row"><a class="nav-link" href="glossary.html"><span class="nav-no">04</span><span class="nav-clip"><span class="nav-word">용어집</span></span><span class="nav-dot"></span></a></div></li>
+      </ul>
+      <div class="nav-foot">
+        <p data-fade style="--f:0">비공식 팬 사이트입니다. <a href="about.html">사이트 안내</a></p>
+        <p class="mono" data-fade style="--f:1">ESC</p>
+      </div>
+    </nav>
+  </div>
+</div>
+
+<main>
+  <section class="hero" id="hero" aria-labelledby="hero-title">
+    <div class="hero-copy">
+      <h1 id="hero-title">힘을 쓸수록,<br>인간으로 돌아올<br>길은 좁아진다<span class="dot">.</span></h1>
+      <div>
+        <p class="lead">더블크로스는 초능력자가 되어 일상을 지키는 TRPG입니다. 이 브리핑을 순서대로 읽으면 약 30분 뒤 첫 세션을 준비할 수 있습니다.</p>
+        <div class="actions">
+          <a class="btn solid" href="guide-1.html">브리핑 시작
+            <svg width="22" height="12" viewBox="0 0 22 12" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M0 6h20M15 1l5 5-5 5"/></svg>
+          </a>
+          <button class="btn" id="lift" type="button" aria-pressed="false">오버레이 걷기</button>
+        </div>
+        <p class="status" id="status" aria-live="polite">일그러진 격자와 붉은 선은 오버레이에 있습니다.</p>
+      </div>
+    </div>
+
+    <figure class="hero-fig">
+      <p class="fig-row mono" aria-hidden="true"><span lang="ja">N市</span><span>1:25000</span><span>35°39′N 139°54′E</span></p>
+      <div class="fig-map">
+        <svg id="map" viewBox="160 0 1300 1000" preserveAspectRatio="xMidYMid meet" role="img" aria-label="도쿄 근교의 도시 N시를 그린 가상의 등고선 지도. 집에서 시작한 붉은 경로가 점점 가늘어지고, 경로 끝에서 좌표 격자가 일그러진다."></svg>
+      </div>
+      <figcaption class="fig-row axis"><span>일상</span><span class="axis-line" aria-hidden="true"></span><span class="axis-end">비일상</span></figcaption>
+    </figure>
+  </section>
+
+  <ul class="three">
+    <li>당신은 초능력자입니다.</li>
+    <li>능력을 쓸수록 괴물에 가까워집니다.</li>
+    <li>사람과의 인연이 당신을 데려옵니다.</li>
+  </ul>
+</main>
+<footer class="colophon" id="book" aria-labelledby="book-title">
+  <div class="colophon-in">
+    <h2 id="book-title">실제 플레이에는 룰북이 필요합니다.</h2>
+    <div class="colophon-grid">
+      <div>
+        <p>이 사이트는 더블크로스의 세계와 진행 흐름을 소개하는 입문 안내이며, 플레이에 필요한 이펙트와 데이터는 싣지 않습니다. 세션에 참여하려면 기본 룰북 1권과 2권이 모두 필요합니다.</p>
+        <p>한국어판은 데이즈엔터의 롤앤토크 브랜드로 출간되어 온라인 서점에서 찾을 수 있습니다. 품절이라면 한국어판 안내 계정에서 증쇄 소식을 확인해 주십시오.</p>
+        <p>D로이스 같은 추가 룰을 쓰려면 상급 룰북을, 우로보로스를 플레이하려면 일본어판 서플리먼트 IC(인피니티 코드)를 더합니다. 처음에는 없어도 괜찮습니다.</p>
+        <p>책의 쇄에 따라 수정 사항이 다를 수 있으니, 구매한 뒤에는 정오표를 함께 확인해 주십시오.</p>
+      </div>
+      <ul>
+        <li><a href="https://novelengine.com/novelengine_new/bbs/content.php?co_id=dx3">한국어판 안내 페이지<svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M1 11L11 1M4 1h7v7"/></svg></a></li>
+        <li><a href="https://novelengine.com/novelengine_new/bbs/content.php?co_id=dx3_errata">정오표<svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M1 11L11 1M4 1h7v7"/></svg></a></li>
+        <li><a href="https://novelengine.com/novelengine_new/bbs/content.php?co_id=dx3_sheet">캐릭터 시트 받기<svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M1 11L11 1M4 1h7v7"/></svg></a></li>
+        <li><a href="guide-7.html">첫 세션 준비<svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M1 11L11 1M4 1h7v7"/></svg></a></li>
+        <li><a href="about.html">사이트 안내<svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M1 11L11 1M4 1h7v7"/></svg></a></li>
+      </ul>
+    </div>
+    <p class="fine">이 사이트는 야노 슌사쿠와 유한회사 F.E.A.R.이 권리를 가진 『더블크로스 The 3rd Edition』의 비공식 2차 창작물이며, 권리사 및 한국어판 발행사와 관계가 없습니다. 비영리로 운영하며 구매 링크로 수익을 얻지 않습니다. 나루세 하루카와 주변 인물, 지도의 세부 지명은 이 사이트가 만든 가상의 것입니다.</p>
+  </div>
+  <div class="checker" aria-hidden="true"></div>
+</footer>
+
+<script src="assets/map.js"></script>
+<script src="assets/menu.js"></script>
+<script src="assets/site.js"></script>
+<script>
+(function () {
+  const { el, drawBase, taper, tip, gridPath, scatter, animate, ROUTE, STOP, stopT, INK, PAPER, RED } = NCity;
+  const svg = document.getElementById('map'), hero = document.getElementById('hero');
+  const narrow = matchMedia('(max-width: 860px)').matches;
+  drawBase(svg, 'assets/n-city-base.svg', narrow ? 2.2 : 1.5, true);
+
+  const grid = el('path', { fill: 'none', stroke: INK, 'stroke-width': 1.4 }, svg);
+  const over = el('g', { class: 'overlay', 'aria-hidden': 'true' }, svg);
+  const bits = scatter(over);
+  const route = el('path', { fill: RED }, over);
+  const stops = ['school', 'station', 'hospital', 'shrine', 'warehouse'].map(k => ({
+    t: stopT(k),
+    n: el('rect', { x: ROUTE[STOP[k]][0] - 9, y: ROUTE[STOP[k]][1] - 9, width: 18, height: 18, fill: PAPER, stroke: INK, 'stroke-width': 2 }, over)
+  }));
+  const home = ROUTE[STOP.home];
+  el('rect', { x: home[0] - 17, y: home[1] - 17, width: 34, height: 34, fill: PAPER, stroke: INK, 'stroke-width': 2.4 }, over);
+  const marker = el('rect', { width: 22, height: 22, fill: RED }, over);
+
+  const state = { t: .02, k: 0 };
+  let run = 0;
+  function paint() {
+    const p = tip(state.t);
+    route.setAttribute('d', taper(state.t, 1));
+    grid.setAttribute('d', gridPath(p[0], p[1], state.k));
+    bits(p[0], p[1], state.k);
+    marker.setAttribute('x', p[0] - 11);
+    marker.setAttribute('y', p[1] - 11);
+    stops.forEach(s => s.n.setAttribute('fill', state.t + .001 >= s.t ? INK : PAPER));
+  }
+  function tween(ms, to) {
+    const id = ++run, from = { t: state.t, k: state.k };
+    animate(ms, p => {
+      if (id !== run) return;
+      state.t = from.t + (to.t - from.t) * p;
+      state.k = from.k + (to.k - from.k) * p;
+      paint();
+    });
+  }
+  paint();
+  tween(2400, { t: 1, k: 1.05 });
+
+  const btn = document.getElementById('lift'), status = document.getElementById('status');
+  btn.addEventListener('click', () => {
+    const on = hero.classList.toggle('lifted');
+    btn.setAttribute('aria-pressed', on);
+    btn.textContent = on ? '오버레이 덮기' : '오버레이 걷기';
+    status.textContent = on ? '아무 일도 없는 평범한 도시입니다. 적어도 그렇게 알려져 있습니다.' : '일그러진 격자와 붉은 선은 오버레이에 있습니다.';
+    tween(900, { t: 1, k: on ? 0 : 1.05 });
+  });
+})();
+</script>
+</body>
+</html>

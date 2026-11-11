@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>판정 다이스 체험 | 더블크로스 입문 브리핑</title>
+<meta name="description" content="더블크로스의 판정 다이스를 직접 굴려 봅니다.">
+<meta name="theme-color" content="#f7f7f7">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='16' height='16' fill='%23cd3131'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/wanteddev/wanted-sans@v1.0.3/packages/wanted-sans/fonts/webfonts/variable/split/WantedSansVariable.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;700&family=Noto+Sans+JP:wght@500;700&display=swap">
+<link rel="stylesheet" href="assets/style.css">
+<link rel="stylesheet" href="assets/pages.css">
+</head>
+<body>
+<header class="top">
+  <a class="brand" href="index.html"><i aria-hidden="true"></i>DX3 입문 브리핑</a>
+  <p class="rights">비공식 팬 사이트입니다. 야노 슌사쿠와 유한회사 F.E.A.R.이 권리를 가진 『더블크로스 The 3rd Edition』의 2차 창작물입니다.</p>
+</header>
+
+<button class="menu-btn" id="menu-btn" type="button" aria-expanded="false" aria-controls="nav" aria-label="메뉴 열기">
+  <span class="menu-roll" aria-hidden="true"><span>메뉴</span><span>닫기</span></span>
+  <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M7 0v14M0 7h14"/></svg>
+</button>
+
+<div class="nav" id="nav" inert>
+  <div class="nav-scrim"></div>
+  <div class="nav-panel">
+    <div class="nav-bg" aria-hidden="true"><i></i><i></i><i></i></div>
+    <svg class="nav-shapes" viewBox="0 0 400 400" fill="none" stroke="#f7f7f7" stroke-width="1.5" aria-hidden="true">
+      <g data-shape="1">
+        <path d="M200 40C290 36 362 110 356 200C350 296 284 362 196 358C104 354 40 290 46 196C52 106 112 44 200 40Z"/>
+        <path d="M204 96C262 96 306 142 300 200C294 262 250 304 196 300C140 296 100 250 106 196C112 140 150 96 204 96Z"/>
+        <path d="M202 150C232 150 252 172 250 200C248 230 226 250 198 248C170 246 152 226 154 198C156 170 174 150 202 150Z"/>
+        <rect x="190" y="190" width="20" height="20" fill="#cd3131" stroke="none"/>
+      </g>
+      <g data-shape="2">
+        <path d="M30 150L370 196V204L30 250Z" fill="#cd3131" stroke="none"/>
+        <rect x="44" y="290" width="16" height="16"/>
+        <rect x="90" y="290" width="16" height="16" fill="#f7f7f7"/>
+        <rect x="136" y="290" width="16" height="16"/>
+        <rect x="182" y="290" width="16" height="16"/>
+        <rect x="228" y="290" width="16" height="16"/>
+        <rect x="274" y="290" width="16" height="16"/>
+        <rect x="320" y="290" width="16" height="16"/>
+      </g>
+      <g data-shape="3">
+        <path d="M200 30L352 160V236L200 370L48 236V160Z"/>
+        <path d="M200 30L282 214L200 266L118 214Z"/>
+        <path d="M118 214L48 236M282 214L352 236M200 266V370"/>
+        <text x="200" y="198" text-anchor="middle" font-size="64" font-weight="800" fill="#f7f7f7" stroke="none">10</text>
+      </g>
+      <g data-shape="4">
+        <path d="M70 60H220V340H70Z"/>
+        <path d="M180 92H330V340H180Z" fill="#141414"/>
+        <path d="M204 132H306M204 158H306M204 184H270"/>
+        <text x="96" y="124" font-size="44" font-weight="800" fill="#f7f7f7" stroke="none">1</text>
+        <text x="282" y="318" font-size="44" font-weight="800" fill="#f7f7f7" stroke="none">2</text>
+      </g>
+      <g data-shape="5">
+        <path d="M60 80h44v44H60zM122 80h44v44h-44zM184 80h44v44h-44zM246 80h44v44h-44zM308 80h44v44h-44z"/>
+        <path d="M60 150h44v44H60zM122 150h44v44h-44zM184 150h44v44h-44zM246 150h44v44h-44zM308 150h44v44h-44z"/>
+        <path d="M60 220h44v44H60zM122 220h44v44h-44zM184 220h44v44h-44zM246 220h44v44h-44zM308 220h44v44h-44z"/>
+        <path d="M60 290h44v44H60zM122 290h44v44h-44zM184 290h44v44h-44z"/>
+        <rect x="184" y="150" width="44" height="44" fill="#f7f7f7"/>
+      </g>
+    </svg>
+
+    <nav class="nav-scroll" aria-label="전체 메뉴">
+      <ul class="nav-list">
+        <li data-shape="1" style="--i:0"><div class="nav-row"><a class="nav-link" href="index.html"><span class="nav-no">01</span><span class="nav-clip"><span class="nav-word">홈</span></span><span class="nav-dot"></span></a></div></li>
+        <li data-shape="2" style="--i:1"><div class="nav-row"><a class="nav-link" href="guide-1.html"><span class="nav-no">02</span><span class="nav-clip"><span class="nav-word">가이드</span></span><span class="nav-dot"></span></a><button class="nav-toggle" type="button" aria-expanded="false" aria-controls="sub-guide" aria-label="가이드 하위 메뉴"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M7 0v14M0 7h14"/></svg></button></div><div class="nav-sub" id="sub-guide" hidden><ol class="sub-guides"><li><a class="sub-top" href="guide-1.html"><span class="nav-sno">01</span>세계관</a></li><li><a class="sub-top" href="guide-2.html"><span class="nav-sno">02</span>프리플레이 및 캐릭터 작성</a></li><li><a class="sub-top" href="guide-3.html"><span class="nav-sno">03</span>오프닝 페이즈</a></li><li><a class="sub-top" href="guide-4.html"><span class="nav-sno">04</span>미들 페이즈 및 판정</a></li><li><a class="sub-top" href="guide-5.html"><span class="nav-sno">05</span>클라이맥스 페이즈 및 전투</a></li><li><a class="sub-top" href="guide-6.html"><span class="nav-sno">06</span>백트랙 및 엔딩</a></li><li><a class="sub-top" href="guide-7.html"><span class="nav-sno">07</span>첫 세션 준비</a></li></ol></div></li>
+        <li data-shape="3" style="--i:2"><div class="nav-row"><a class="nav-link" href="tool-dice.html" aria-current="page"><span class="nav-no">03</span><span class="nav-clip"><span class="nav-word">체험 도구</span></span><span class="nav-dot"></span></a><button class="nav-toggle" type="button" aria-expanded="true" aria-controls="sub-tools" aria-label="체험 도구 하위 메뉴"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M7 0v14M0 7h14"/></svg></button></div><div class="nav-sub" id="sub-tools"><ol class="sub-guides"><li><a class="sub-top" href="tool-dice.html" aria-current="page"><span class="nav-sno">01</span>판정 다이스 체험</a></li><li><a class="sub-top" href="tool-syndrome.html"><span class="nav-sno">02</span>신드롬 조합 탐색</a></li></ol></div></li>
+        <li data-shape="5" style="--i:3"><div class="nav-row"><a class="nav-link" href="glossary.html"><span class="nav-no">04</span><span class="nav-clip"><span class="nav-word">용어집</span></span><span class="nav-dot"></span></a></div></li>
+      </ul>
+      <div class="nav-foot">
+        <p data-fade style="--f:0">비공식 팬 사이트입니다. <a href="about.html">사이트 안내</a></p>
+        <p class="mono" data-fade style="--f:1">ESC</p>
+      </div>
+    </nav>
+  </div>
+</div>
+
+<div class="page-head"><h1>판정 다이스 체험</h1><p class="sub">다이스 수와 크리티컬치, 기능 레벨을 바꿔 가며 직접 굴려 보십시오.</p></div>
+<main class="page">
+<section class="tool dice-tool">
+  <div class="cmd">
+    <p class="cmd-label">다이스 명령어</p>
+    <p class="cmd-line" aria-live="polite"><code id="cmd" lang="en">4dx10+0</code></p>
+    <p class="cmd-note"><b>{다이스 수}dx{크리티컬치}+{기능 레벨}</b> 형식입니다. 온라인 세션 도구의 다이스 봇에 이 형식으로 입력합니다.</p>
+  </div>
+  <form class="controls" id="form">
+    <div class="slider" data-k="dice" data-min="1" data-max="30" data-v="4"><span id="l-dice">다이스 수</span></div>
+    <div class="slider" data-k="crit" data-min="2" data-max="10" data-v="10"><span id="l-crit">크리티컬치</span></div>
+    <div class="slider" data-k="level" data-min="0" data-max="20" data-v="0"><span id="l-level">기능 레벨</span></div>
+    <button class="btn solid" type="submit">굴리기
+      <svg width="22" height="12" viewBox="0 0 22 12" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M0 6h20M15 1l5 5-5 5"/></svg>
+    </button>
+    <p class="tool-note">크리티컬치는 이펙트로 낮출 수 있습니다. 여기서는 재굴림이 끝나도록 2까지만 고를 수 있으며, 실제 하한은 이펙트에 적혀 있습니다.</p>
+    <p class="tool-note"><a href="guide-4.html">판정 규칙 다시 읽기</a></p>
+  </form>
+  <div class="result">
+    <p class="result-label" id="label">예시 판정</p>
+    <ol class="rounds" id="rounds"></ol>
+    <div class="total" id="total" aria-live="polite"></div>
+  </div>
+</section>
+
+</main>
+<footer class="site-foot"><p>비공식 팬 사이트입니다. 야노 슌사쿠와 유한회사 F.E.A.R.이 권리를 가진 『더블크로스 The 3rd Edition』의 2차 창작물입니다.</p><p><a href="about.html">사이트 안내</a> <a href="glossary.html">용어집</a></p></footer>
+
+<script src="assets/menu.js"></script>
+<script src="assets/site.js"></script>
+<script>
+(function () {
+  const $ = id => document.getElementById(id);
+  const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const narrow = matchMedia('(max-width: 860px)');
+  const val = {};
+
+  // 값마다 숫자 입력칸, −/+ 버튼, 슬라이더를 만들고 셋을 같은 값으로 묶는다
+  document.querySelectorAll('.slider').forEach(box => {
+    const k = box.dataset.k, min = +box.dataset.min, max = +box.dataset.max, name = box.querySelector('span').textContent;
+    val[k] = +box.dataset.v;
+    const step = document.createElement('div');
+    step.className = 'step';
+    step.innerHTML = `<button type="button" data-d="-1" aria-label="${name} 1 줄이기">−</button><input type="number" id="${k}" inputmode="numeric" min="${min}" max="${max}" step="1" value="${val[k]}" aria-labelledby="l-${k}"><button type="button" data-d="1" aria-label="${name} 1 늘리기">+</button>`;
+    const range = document.createElement('input');
+    Object.assign(range, { type: 'range', min, max, step: 1, value: val[k] });
+    range.setAttribute('aria-label', name + ' 슬라이더');
+    range.tabIndex = -1;
+    box.append(step, range);
+    const num = step.querySelector('input'), btns = step.querySelectorAll('button');
+    const sync = () => {
+      num.value = range.value = val[k];
+      btns[0].disabled = val[k] <= min; btns[1].disabled = val[k] >= max;
+      $('cmd').textContent = `${val.dice ?? 4}dx${val.crit ?? 10}+${val.level ?? 0}`;
+    };
+    const set = v => { v = Math.round(+v); val[k] = Number.isFinite(v) ? Math.min(max, Math.max(min, v)) : val[k]; sync(); };
+    btns.forEach(b => b.addEventListener('click', () => set(val[k] + +b.dataset.d)));
+    range.addEventListener('input', () => set(range.value));
+    // 입력 중에는 범위 안의 값만 바로 반영하고, 칸을 벗어날 때 범위로 맞춘다
+    num.addEventListener('input', () => {
+      const v = +num.value;
+      if (num.value !== '' && Number.isInteger(v) && v >= min && v <= max) { val[k] = v; range.value = v; btns[0].disabled = v <= min; btns[1].disabled = v >= max; $('cmd').textContent = `${val.dice}dx${val.crit}+${val.level}`; }
+    });
+    num.addEventListener('change', () => set(num.value === '' ? val[k] : num.value));
+    sync();
+  });
+
+  const d10 = () => { const a = new Uint32Array(1); crypto.getRandomValues(a); return a[0] % 10 + 1; };
+  function roll(n, crit) {
+    const rounds = [];
+    let left = n;
+    while (left > 0) {
+      const r = Array.from({ length: left }, d10);
+      rounds.push(r);
+      left = r.filter(v => v >= crit).length;
+    }
+    return rounds;
+  }
+
+  function row(r, i, crit, last) {
+    const hi = last ? r.indexOf(Math.max(...r)) : -1;
+    return `<li><span class="mono">${i + 1}회</span><span class="dice">${r.map((v, k) => `<b class="${v >= crit ? 'c' : k === hi ? 'hi' : ''}">${v}</b>`).join('')}</span><span class="plus">${last ? '' : '+10'}</span></li>`;
+  }
+
+  function render(rounds, crit, level, label) {
+    $('label').textContent = label;
+    const n = rounds.length, rows = rounds.map((r, i) => row(r, i, crit, i === n - 1));
+    const list = $('rounds');
+    list.innerHTML = n > 8
+      ? rows.slice(0, 3).join('') + `<li class="fold"><details><summary>가운데 ${n - 6}회 펼치기</summary><ol>${rows.slice(3, n - 3).join('')}</ol></details></li>` + rows.slice(n - 3).join('')
+      : rows.join('');
+    const fumble = rounds[0].every(v => v === 1);
+    if (fumble) {
+      $('total').innerHTML = '<strong class="fumble">펌블</strong><p>모든 다이스가 1입니다.<br>자동 실패입니다.</p>';
+    } else {
+      const last = Math.max(...rounds[n - 1]), crits = n - 1, sum = crits * 10 + last + level;
+      $('total').innerHTML = `<strong>${sum}</strong><p>달성치<br>10 × ${crits}회 + 마지막 눈 ${last} + 기능 레벨 ${level}</p>`;
+    }
+    if (!reduced) [...list.children].forEach((li, i) => li.animate(
+      [{ opacity: 0, transform: 'translateY(10px)' }, { opacity: 1, transform: 'none' }],
+      { duration: 320, delay: Math.min(i, 8) * 70, easing: 'cubic-bezier(.16, 1, .3, 1)', fill: 'backwards' }
+    ));
+  }
+
+  $('form').addEventListener('submit', e => {
+    e.preventDefault();
+    // 입력 중이던 칸의 값도 범위에 맞춰 확정한다
+    document.querySelectorAll('.step input').forEach(n => n.dispatchEvent(new Event('change')));
+    render(roll(val.dice, val.crit), val.crit, val.level, `판정 결과 · ${val.dice}dx${val.crit}+${val.level}`);
+    // 세로 화면에서는 결과가 위에 있으므로, 화면 밖이면 결과 숫자로 올려 보여준다
+    if (narrow.matches) {
+      const r = $('total').getBoundingClientRect();
+      if (r.top < 0 || r.bottom > innerHeight) $('total').scrollIntoView({ block: 'center', behavior: reduced ? 'auto' : 'smooth' });
+    }
+  });
+  window.__dice = { roll, render };
+  render([[3, 7, 10, 10], [4, 10], [5]], 10, 0, '예시 판정 · 4dx10+0');
+})();
+</script>
+</body>
+</html>

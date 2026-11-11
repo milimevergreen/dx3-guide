@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>신드롬 조합 탐색 | 더블크로스 입문 브리핑</title>
+<meta name="description" content="더블크로스의 신드롬을 골라 조합의 분위기를 살펴봅니다.">
+<meta name="theme-color" content="#f7f7f7">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='16' height='16' fill='%23cd3131'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/wanteddev/wanted-sans@v1.0.3/packages/wanted-sans/fonts/webfonts/variable/split/WantedSansVariable.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;700&family=Noto+Sans+JP:wght@500;700&display=swap">
+<link rel="stylesheet" href="assets/style.css">
+<link rel="stylesheet" href="assets/pages.css">
+</head>
+<body>
+<header class="top">
+  <a class="brand" href="index.html"><i aria-hidden="true"></i>DX3 입문 브리핑</a>
+  <p class="rights">비공식 팬 사이트입니다. 야노 슌사쿠와 유한회사 F.E.A.R.이 권리를 가진 『더블크로스 The 3rd Edition』의 2차 창작물입니다.</p>
+</header>
+
+<button class="menu-btn" id="menu-btn" type="button" aria-expanded="false" aria-controls="nav" aria-label="메뉴 열기">
+  <span class="menu-roll" aria-hidden="true"><span>메뉴</span><span>닫기</span></span>
+  <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M7 0v14M0 7h14"/></svg>
+</button>
+
+<div class="nav" id="nav" inert>
+  <div class="nav-scrim"></div>
+  <div class="nav-panel">
+    <div class="nav-bg" aria-hidden="true"><i></i><i></i><i></i></div>
+    <svg class="nav-shapes" viewBox="0 0 400 400" fill="none" stroke="#f7f7f7" stroke-width="1.5" aria-hidden="true">
+      <g data-shape="1">
+        <path d="M200 40C290 36 362 110 356 200C350 296 284 362 196 358C104 354 40 290 46 196C52 106 112 44 200 40Z"/>
+        <path d="M204 96C262 96 306 142 300 200C294 262 250 304 196 300C140 296 100 250 106 196C112 140 150 96 204 96Z"/>
+        <path d="M202 150C232 150 252 172 250 200C248 230 226 250 198 248C170 246 152 226 154 198C156 170 174 150 202 150Z"/>
+        <rect x="190" y="190" width="20" height="20" fill="#cd3131" stroke="none"/>
+      </g>
+      <g data-shape="2">
+        <path d="M30 150L370 196V204L30 250Z" fill="#cd3131" stroke="none"/>
+        <rect x="44" y="290" width="16" height="16"/>
+        <rect x="90" y="290" width="16" height="16" fill="#f7f7f7"/>
+        <rect x="136" y="290" width="16" height="16"/>
+        <rect x="182" y="290" width="16" height="16"/>
+        <rect x="228" y="290" width="16" height="16"/>
+        <rect x="274" y="290" width="16" height="16"/>
+        <rect x="320" y="290" width="16" height="16"/>
+      </g>
+      <g data-shape="3">
+        <path d="M200 30L352 160V236L200 370L48 236V160Z"/>
+        <path d="M200 30L282 214L200 266L118 214Z"/>
+        <path d="M118 214L48 236M282 214L352 236M200 266V370"/>
+        <text x="200" y="198" text-anchor="middle" font-size="64" font-weight="800" fill="#f7f7f7" stroke="none">10</text>
+      </g>
+      <g data-shape="4">
+        <path d="M70 60H220V340H70Z"/>
+        <path d="M180 92H330V340H180Z" fill="#141414"/>
+        <path d="M204 132H306M204 158H306M204 184H270"/>
+        <text x="96" y="124" font-size="44" font-weight="800" fill="#f7f7f7" stroke="none">1</text>
+        <text x="282" y="318" font-size="44" font-weight="800" fill="#f7f7f7" stroke="none">2</text>
+      </g>
+      <g data-shape="5">
+        <path d="M60 80h44v44H60zM122 80h44v44h-44zM184 80h44v44h-44zM246 80h44v44h-44zM308 80h44v44h-44z"/>
+        <path d="M60 150h44v44H60zM122 150h44v44h-44zM184 150h44v44h-44zM246 150h44v44h-44zM308 150h44v44h-44z"/>
+        <path d="M60 220h44v44H60zM122 220h44v44h-44zM184 220h44v44h-44zM246 220h44v44h-44zM308 220h44v44h-44z"/>
+        <path d="M60 290h44v44H60zM122 290h44v44h-44zM184 290h44v44h-44z"/>
+        <rect x="184" y="150" width="44" height="44" fill="#f7f7f7"/>
+      </g>
+    </svg>
+
+    <nav class="nav-scroll" aria-label="전체 메뉴">
+      <ul class="nav-list">
+        <li data-shape="1" style="--i:0"><div class="nav-row"><a class="nav-link" href="index.html"><span class="nav-no">01</span><span class="nav-clip"><span class="nav-word">홈</span></span><span class="nav-dot"></span></a></div></li>
+        <li data-shape="2" style="--i:1"><div class="nav-row"><a class="nav-link" href="guide-1.html"><span class="nav-no">02</span><span class="nav-clip"><span class="nav-word">가이드</span></span><span class="nav-dot"></span></a><button class="nav-toggle" type="button" aria-expanded="false" aria-controls="sub-guide" aria-label="가이드 하위 메뉴"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M7 0v14M0 7h14"/></svg></button></div><div class="nav-sub" id="sub-guide" hidden><ol class="sub-guides"><li><a class="sub-top" href="guide-1.html"><span class="nav-sno">01</span>세계관</a></li><li><a class="sub-top" href="guide-2.html"><span class="nav-sno">02</span>프리플레이 및 캐릭터 작성</a></li><li><a class="sub-top" href="guide-3.html"><span class="nav-sno">03</span>오프닝 페이즈</a></li><li><a class="sub-top" href="guide-4.html"><span class="nav-sno">04</span>미들 페이즈 및 판정</a></li><li><a class="sub-top" href="guide-5.html"><span class="nav-sno">05</span>클라이맥스 페이즈 및 전투</a></li><li><a class="sub-top" href="guide-6.html"><span class="nav-sno">06</span>백트랙 및 엔딩</a></li><li><a class="sub-top" href="guide-7.html"><span class="nav-sno">07</span>첫 세션 준비</a></li></ol></div></li>
+        <li data-shape="3" style="--i:2"><div class="nav-row"><a class="nav-link" href="tool-dice.html" aria-current="true"><span class="nav-no">03</span><span class="nav-clip"><span class="nav-word">체험 도구</span></span><span class="nav-dot"></span></a><button class="nav-toggle" type="button" aria-expanded="true" aria-controls="sub-tools" aria-label="체험 도구 하위 메뉴"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M7 0v14M0 7h14"/></svg></button></div><div class="nav-sub" id="sub-tools"><ol class="sub-guides"><li><a class="sub-top" href="tool-dice.html"><span class="nav-sno">01</span>판정 다이스 체험</a></li><li><a class="sub-top" href="tool-syndrome.html" aria-current="page"><span class="nav-sno">02</span>신드롬 조합 탐색</a></li></ol></div></li>
+        <li data-shape="5" style="--i:3"><div class="nav-row"><a class="nav-link" href="glossary.html"><span class="nav-no">04</span><span class="nav-clip"><span class="nav-word">용어집</span></span><span class="nav-dot"></span></a></div></li>
+      </ul>
+      <div class="nav-foot">
+        <p data-fade style="--f:0">비공식 팬 사이트입니다. <a href="about.html">사이트 안내</a></p>
+        <p class="mono" data-fade style="--f:1">ESC</p>
+      </div>
+    </nav>
+  </div>
+</div>
+
+<div class="page-head"><h1>신드롬 조합 탐색</h1><p class="sub">신드롬을 1개에서 3개까지 골라 내 캐릭터의 분위기를 잡아 보십시오.</p></div>
+<main class="page">
+<section class="tool">
+  <div class="controls syn-col">
+    <ul class="syn-list" id="list"></ul>
+    <p class="tool-note" style="margin-top:18px">실제 능력과 수치는 룰북에서 확인해 주십시오.</p>
+  </div>
+  <div class="result" aria-live="polite">
+    <p class="breed" id="breed"></p>
+    <p class="syn-sentence" id="sentence"></p>
+    <ul class="syn-cards" id="cards"></ul>
+    <p class="syn-warn" id="warn" hidden>우로보로스를 플레이하려면 서플리먼트 IC(인피니티 코드)의 구매가 필요합니다. 이 책은 아직 한국어판이 없어 일본어판으로 구해야 합니다.</p>
+  </div>
+</section>
+
+</main>
+<footer class="site-foot"><p>비공식 팬 사이트입니다. 야노 슌사쿠와 유한회사 F.E.A.R.이 권리를 가진 『더블크로스 The 3rd Edition』의 2차 창작물입니다.</p><p><a href="about.html">사이트 안내</a> <a href="glossary.html">용어집</a></p></footer>
+
+<script src="assets/menu.js"></script>
+<script src="assets/site.js"></script>
+<script>
+(function () {
+  const DATA = [{"ko":"엔젤 헤일로","jp":"エンジェルハィロゥ","en":"Angel Halo","keys":["빛","어둠","환상","오감 강화"],"desc":"빛을 조작해 공격하거나 자신의 모습을 숨기고, 타인에게 환상을 보여주는 신드롬."},{"ko":"발로르","jp":"バロール","en":"Balor","keys":["중력","시간","암흑","운동 에너지"],"desc":"중력을 조종하는 '마안'과 인력, 척력을 다루는 신드롬. 제한적으로 시간을 조종할 수도 있다."},{"ko":"블랙독","jp":"ブラックドッグ","en":"Black Dog","keys":["기계","전기","번개","개조"],"desc":"발전세포를 이용해 생체전기를 조작해 번개처럼 사용하거나, 기계를 몸에 심어넣어 신체를 강화하는 신드롬."},{"ko":"브람 스토커","jp":"ブラム＝ストーカー","en":"Bram=Stoker","keys":["혈액","체액","종자","대가"],"desc":"혈액으로 대표되는 체액을 조종하는 신드롬. 사용자의 생명력을 대가로 삼는 경우가 많다. 종자를 작성해 자신을 대신해 공격하게 하거나, 공격을 대신 맞도록 할 수도 있다."},{"ko":"키마이라","jp":"キュマイラ","en":"Chimaera","keys":["괴물","짐승","변신","본능"],"desc":"신체를 짐승처럼 변화시켜 강하게 공격하거나, 강화된 육체 능력으로 공격을 받아낼 수 있도록 하는 신드롬. 본디 존재하지 않는 신체 부위를 만들 수도 있다."},{"ko":"엑자일","jp":"エグザイル","en":"Exile","keys":["신체 변형","이형","재생","뼈와 살"],"desc":"자신의 의지로 조종할 수 없는 머리카락, 뼈 등을 조종하는 등 육체를 변화시켜 상황에 대응하도록 하는 신드롬. 체내의 중요 기관을 움직여 치명상을 피하거나 육체의 구조 자체를 변화시키기도 한다."},{"ko":"하누만","jp":"ハヌマーン","en":"Hanuman","keys":["파동","바람","소리","속도"],"desc":"쾌속, 뛰어난 반사 능력의 신드롬. 충격을 발생시켜 공격에 사용하거나 소리를 조작하는 파동 활용이 가능."},{"ko":"모르페우스","jp":"モルフェウス","en":"Morpheus","keys":["물질 변환","모래","창조","연금술"],"desc":"물체를 변형시키거나 무기, 방어구를 작성하여 활용하는 신드롬. '모래'를 조종해 전투에 활용하기도 함."},{"ko":"노이만","jp":"ノイマン","en":"Neumann","keys":["사고","계산","지휘","천재"],"desc":"초인적인 사고 능력, 두뇌를 통한 분석, 판단, 지원에 특화된 신드롬. 다양한 분야에서의 기술 습득이 빠르고, 이로 인해 전투에 숙달되는 경우가 많다."},{"ko":"오르쿠스","jp":"オルクス","en":"Orcus","keys":["영역","대지","동식물","지배"],"desc":"인자를 조작해 영역을 지배, 조종하는 신드롬. 땅/식물을 조종하거나 텔레키네시스, 동물 조종 등을 행하기도 한다."},{"ko":"샐러맨더","jp":"サラマンダー","en":"Salamander","keys":["불","얼음","열 에너지","온도 조작"],"desc":"열을 다루는 신드롬. 화염과 얼음을 모두 다룰 수 있으며, 열에너지를 활용한 폭발적인 공격, 체내 온도를 조절해 판단력을 향상시킬 수도 있다."},{"ko":"솔라리스","jp":"ソラリス","en":"Solaris","keys":["독","꽃","약물","환각"],"desc":"체내 공장에서 발생시킨 화학 물질의 생성 및 활용. 독을 발생시켜 공격하거나 환각제로 타인을 통제, 약물을 통해 아군을 지원한다."},{"ko":"우로보로스","jp":"ウロボロス","en":"Ouroboros","keys":["그림자","포식","모방","흡수"],"desc":"다른 레니게이드를 포식해 진화하거나 이펙트를 복사해 활용하는 신드롬. 혹은 그림자를 조종해 공격하거나 무기로 삼고, 독립적으로 행동하게 할 수도 있다."}];
+  const BREED = ['신드롬을 고르십시오', '퓨어브리드', '크로스브리드', '트라이브리드'];
+  const list = document.getElementById('list'), picked = [];
+  const btns = DATA.map((s, i) => {
+    const li = document.createElement('li'), b = document.createElement('button');
+    b.type = 'button'; b.className = 'syn-btn'; b.setAttribute('aria-pressed', 'false');
+    b.innerHTML = '<i aria-hidden="true"></i>';
+    b.append(s.ko);
+    b.addEventListener('click', () => {
+      const at = picked.indexOf(i);
+      if (at >= 0) picked.splice(at, 1); else if (picked.length < 3) picked.push(i);
+      draw();
+    });
+    li.appendChild(b); list.appendChild(li);
+    return b;
+  });
+  function draw() {
+    btns.forEach((b, i) => {
+      const on = picked.includes(i);
+      b.setAttribute('aria-pressed', on);
+      b.disabled = !on && picked.length >= 3;
+    });
+    const sel = picked.map(i => DATA[i]);
+    document.getElementById('breed').textContent = BREED[sel.length];
+    document.getElementById('sentence').textContent = sel.length
+      ? sel.map(s => s.keys[0] + '의 힘').join(', ') + (sel.length > 1 ? '을 함께 다루는' : '에 집중하는') + ' 캐릭터입니다.'
+      : '왼쪽 목록에서 끌리는 계통을 눌러 보십시오.';
+    const cards = document.getElementById('cards');
+    cards.replaceChildren(...sel.map(s => {
+      const li = document.createElement('li');
+      const part = (tag, cls, text, lang) => {
+        const n = document.createElement(tag);
+        if (cls) n.className = cls;
+        if (lang) n.lang = lang;
+        n.textContent = text;
+        return n;
+      };
+      li.append(part('strong', '', s.ko), part('span', 'en', s.en, 'en'), part('span', 'keys', s.keys.join(' · ')), part('span', 'desc', s.desc));
+      return li;
+    }));
+    cards.hidden = !sel.length;
+    document.getElementById('warn').hidden = !sel.some(s => s.ko === '우로보로스');
+  }
+  draw();
+})();
+</script>
+</body>
+</html>

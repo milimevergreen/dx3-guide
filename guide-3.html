@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>오프닝 페이즈 | 더블크로스 입문 브리핑</title>
+<meta name="description" content="침식률과 오프닝 페이즈, 침식률이 오르는 순간을 설명합니다.">
+<meta name="theme-color" content="#f7f7f7">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='16' height='16' fill='%23cd3131'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/wanteddev/wanted-sans@v1.0.3/packages/wanted-sans/fonts/webfonts/variable/split/WantedSansVariable.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;700&family=Noto+Sans+JP:wght@500;700&display=swap">
+<link rel="stylesheet" href="assets/style.css">
+<link rel="stylesheet" href="assets/pages.css">
+</head>
+<body data-guide="3">
+<header class="top">
+  <a class="brand" href="index.html"><i aria-hidden="true"></i>DX3 입문 브리핑</a>
+  <p class="rights">비공식 팬 사이트입니다. 야노 슌사쿠와 유한회사 F.E.A.R.이 권리를 가진 『더블크로스 The 3rd Edition』의 2차 창작물입니다.</p>
+</header>
+
+<button class="menu-btn" id="menu-btn" type="button" aria-expanded="false" aria-controls="nav" aria-label="메뉴 열기">
+  <span class="menu-roll" aria-hidden="true"><span>메뉴</span><span>닫기</span></span>
+  <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M7 0v14M0 7h14"/></svg>
+</button>
+
+<div class="nav" id="nav" inert>
+  <div class="nav-scrim"></div>
+  <div class="nav-panel">
+    <div class="nav-bg" aria-hidden="true"><i></i><i></i><i></i></div>
+    <svg class="nav-shapes" viewBox="0 0 400 400" fill="none" stroke="#f7f7f7" stroke-width="1.5" aria-hidden="true">
+      <g data-shape="1">
+        <path d="M200 40C290 36 362 110 356 200C350 296 284 362 196 358C104 354 40 290 46 196C52 106 112 44 200 40Z"/>
+        <path d="M204 96C262 96 306 142 300 200C294 262 250 304 196 300C140 296 100 250 106 196C112 140 150 96 204 96Z"/>
+        <path d="M202 150C232 150 252 172 250 200C248 230 226 250 198 248C170 246 152 226 154 198C156 170 174 150 202 150Z"/>
+        <rect x="190" y="190" width="20" height="20" fill="#cd3131" stroke="none"/>
+      </g>
+      <g data-shape="2">
+        <path d="M30 150L370 196V204L30 250Z" fill="#cd3131" stroke="none"/>
+        <rect x="44" y="290" width="16" height="16"/>
+        <rect x="90" y="290" width="16" height="16" fill="#f7f7f7"/>
+        <rect x="136" y="290" width="16" height="16"/>
+        <rect x="182" y="290" width="16" height="16"/>
+        <rect x="228" y="290" width="16" height="16"/>
+        <rect x="274" y="290" width="16" height="16"/>
+        <rect x="320" y="290" width="16" height="16"/>
+      </g>
+      <g data-shape="3">
+        <path d="M200 30L352 160V236L200 370L48 236V160Z"/>
+        <path d="M200 30L282 214L200 266L118 214Z"/>
+        <path d="M118 214L48 236M282 214L352 236M200 266V370"/>
+        <text x="200" y="198" text-anchor="middle" font-size="64" font-weight="800" fill="#f7f7f7" stroke="none">10</text>
+      </g>
+      <g data-shape="4">
+        <path d="M70 60H220V340H70Z"/>
+        <path d="M180 92H330V340H180Z" fill="#141414"/>
+        <path d="M204 132H306M204 158H306M204 184H270"/>
+        <text x="96" y="124" font-size="44" font-weight="800" fill="#f7f7f7" stroke="none">1</text>
+        <text x="282" y="318" font-size="44" font-weight="800" fill="#f7f7f7" stroke="none">2</text>
+      </g>
+      <g data-shape="5">
+        <path d="M60 80h44v44H60zM122 80h44v44h-44zM184 80h44v44h-44zM246 80h44v44h-44zM308 80h44v44h-44z"/>
+        <path d="M60 150h44v44H60zM122 150h44v44h-44zM184 150h44v44h-44zM246 150h44v44h-44zM308 150h44v44h-44z"/>
+        <path d="M60 220h44v44H60zM122 220h44v44h-44zM184 220h44v44h-44zM246 220h44v44h-44zM308 220h44v44h-44z"/>
+        <path d="M60 290h44v44H60zM122 290h44v44h-44zM184 290h44v44h-44z"/>
+        <rect x="184" y="150" width="44" height="44" fill="#f7f7f7"/>
+      </g>
+    </svg>
+
+    <nav class="nav-scroll" aria-label="전체 메뉴">
+      <ul class="nav-list">
+        <li data-shape="1" style="--i:0"><div class="nav-row"><a class="nav-link" href="index.html"><span class="nav-no">01</span><span class="nav-clip"><span class="nav-word">홈</span></span><span class="nav-dot"></span></a></div></li>
+        <li data-shape="2" style="--i:1"><div class="nav-row"><a class="nav-link" href="guide-1.html" aria-current="true"><span class="nav-no">02</span><span class="nav-clip"><span class="nav-word">가이드</span></span><span class="nav-dot"></span></a><button class="nav-toggle" type="button" aria-expanded="true" aria-controls="sub-guide" aria-label="가이드 하위 메뉴"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M7 0v14M0 7h14"/></svg></button></div><div class="nav-sub" id="sub-guide"><ol class="sub-guides"><li><a class="sub-top" href="guide-1.html"><span class="nav-sno">01</span>세계관</a></li><li><a class="sub-top" href="guide-2.html"><span class="nav-sno">02</span>프리플레이 및 캐릭터 작성</a></li><li><a class="sub-top" href="guide-3.html" aria-current="page"><span class="nav-sno">03</span>오프닝 페이즈</a></li><li><a class="sub-top" href="guide-4.html"><span class="nav-sno">04</span>미들 페이즈 및 판정</a></li><li><a class="sub-top" href="guide-5.html"><span class="nav-sno">05</span>클라이맥스 페이즈 및 전투</a></li><li><a class="sub-top" href="guide-6.html"><span class="nav-sno">06</span>백트랙 및 엔딩</a></li><li><a class="sub-top" href="guide-7.html"><span class="nav-sno">07</span>첫 세션 준비</a></li></ol></div></li>
+        <li data-shape="3" style="--i:2"><div class="nav-row"><a class="nav-link" href="tool-dice.html"><span class="nav-no">03</span><span class="nav-clip"><span class="nav-word">체험 도구</span></span><span class="nav-dot"></span></a><button class="nav-toggle" type="button" aria-expanded="false" aria-controls="sub-tools" aria-label="체험 도구 하위 메뉴"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M7 0v14M0 7h14"/></svg></button></div><div class="nav-sub" id="sub-tools" hidden><ol class="sub-guides"><li><a class="sub-top" href="tool-dice.html"><span class="nav-sno">01</span>판정 다이스 체험</a></li><li><a class="sub-top" href="tool-syndrome.html"><span class="nav-sno">02</span>신드롬 조합 탐색</a></li></ol></div></li>
+        <li data-shape="5" style="--i:3"><div class="nav-row"><a class="nav-link" href="glossary.html"><span class="nav-no">04</span><span class="nav-clip"><span class="nav-word">용어집</span></span><span class="nav-dot"></span></a></div></li>
+      </ul>
+      <div class="nav-foot">
+        <p data-fade style="--f:0">비공식 팬 사이트입니다. <a href="about.html">사이트 안내</a></p>
+        <p class="mono" data-fade style="--f:1">ESC</p>
+      </div>
+    </nav>
+  </div>
+</div>
+
+<div class="title-band">
+  <p class="giant-no" aria-hidden="true">03</p>
+  <div class="guide-title">
+    <h1>오프닝 페이즈</h1>
+    
+  </div>
+  <div class="steps-wrap">
+    <p class="mono" aria-hidden="true">03 / 07</p>
+    <ol class="steps" aria-label="가이드 7단계 중 3단계"><li class="past"></li><li class="past"></li><li class="now" aria-current="step"></li><li></li><li></li><li></li><li></li></ol>
+  </div>
+</div>
+<main class="read">
+<aside class="stage" id="stage" aria-label="본문의 진행을 보여주는 N시 지도">
+  <div class="plane" id="plane"><svg id="map" viewBox="0 -500 1600 2000" aria-hidden="true"></svg></div>
+  <div class="gauge" aria-hidden="true">
+    <span class="gauge-label">침식률</span>
+    <div class="track"><span class="hundred">100%</span><span class="line"></span><span class="fill"></span><span class="rail"><span class="marker"></span></span></div>
+  </div>
+  <p class="caption" id="caption" aria-live="polite"></p>
+  <ol class="legs" id="legs" aria-label="이 페이지의 구간"></ol>
+</aside>
+
+<article class="text">
+  <section id="s1" class="crop" data-step="0">
+    <h2>침식률: 체내의 레니게이드 바이러스가 활성화된 정도</h2>
+    <p>침식률은 캐릭터를 침식하고 있는 레니게이드 바이러스의 활성화도를 나타내는 수치로, 오버드가 힘을 사용할수록, 혹은 격렬한 레니게이드 현상과 반응 등에 노출되어 있을수록 증가합니다. 세션을 시작할 때의 침식률은 캐릭터 시트의 각성과 충동으로 정해집니다.</p>
+    <p>지도 좌측에 표시되어 있는 눈금이 현재 하루카의 침식률입니다. 이 눈금에서 기억할 기준선은 하나-100% 뿐입니다. 100%의 침식률이 인간과 졈을 나누는 기준치이기 때문입니다.</p>
+    <p class="hundred-fig">100%<small>기억할<br>기준선</small></p>
+  </section>
+
+  <section id="s2" data-step="1">
+    <h2>오프닝 페이즈</h2>
+    <p>각 인물의 일상과 사건의 시작을 그립니다.</p>
+    <p>씬에 등장하면 침식률이 1D10 오릅니다. 아직 아무 일도 일어나지 않은 것 같은 장면에서도, 오버드는 등장하는 것만으로 대가를 치릅니다.</p>
+    <p>하루카의 오프닝은 핸드아웃의 장면입니다. 저녁의 N역 승강장, 미유와 함께 집으로 돌아가는 전철을 기다리던 하루카는 선로 건너편 어둠 속에서 이쪽을 보고 있는 ‘무언가’와 마주칩니다. 미유도 그것을 보았고, 그 순간 하루카의 안에서 알 수 없는 힘이 눈을 뜹니다.</p>
+  </section>
+
+  <section id="s3" data-step="2">
+    <h2>침식률이 오르는 순간들</h2>
+    <p>하루카가 학교에 나가고, 역에서 사건을 쫓아가는 것만으로도 침식률은 올라갑니다. 이야기에 깊게, 자주 관여할수록 그에 상응하는 대가를 내어주게 되는 것입니다.</p>
+    <p>이하는 침식률이 상승하는 대표적 경우의 수를 나타내는 표입니다:</p>
+    <dl class="rise">
+      <div><dt>씬에 등장할 때</dt><dd><b>1D10</b></dd></div>
+      <div><dt>이펙트를 사용할 때</dt><dd>이펙트의 침식치 항목에 적힌 수치만큼</dd></div>
+      <div><dt>충동판정을 했을 때</dt><dd><b>2D10</b></dd></div>
+      <div><dt>그 밖에</dt><dd>제네시프트, 일부 아이템의 사용</dd></div>
+    </dl>
+    <p>이펙트와 충동판정은 다음 장들에서 실제로 쓰는 장면과 함께 다시 나옵니다.</p>
+  </section>
+<nav class="pager" aria-label="이전과 다음 가이드"><a href="guide-2.html">이전: 프리플레이 및 캐릭터 작성</a><a href="guide-4.html">다음: 미들 페이즈 및 판정</a></nav></article>
+
+</main>
+<footer class="site-foot"><p>비공식 팬 사이트입니다. 야노 슌사쿠와 유한회사 F.E.A.R.이 권리를 가진 『더블크로스 The 3rd Edition』의 2차 창작물입니다.</p><p><a href="about.html">사이트 안내</a> <a href="glossary.html">용어집</a></p></footer>
+
+<script src="assets/map.js"></script>
+<script src="assets/menu.js"></script>
+<script src="assets/site.js"></script>
+<script>
+(function () {
+  const { el, drawBase, taper, tip, gridPath, scatter, animate, ROUTE, STOP, stopT, INK, PAPER, RED } = NCity;
+  const svg = document.getElementById('map'), plane = document.getElementById('plane'), stage = document.getElementById('stage');
+  const caption = document.getElementById('caption'), legs = document.getElementById('legs');
+  const narrow = matchMedia('(max-width: 860px)');
+  drawBase(svg, 'assets/n-city-base.svg', narrow.matches ? 2 : 1.2);
+
+  const grid = el('path', { fill: 'none', stroke: INK, 'stroke-width': 1 }, svg);
+  const bits = scatter(el('g', {}, svg));
+  const strings = el('g', {}, svg);
+  const route = el('path', { fill: RED }, svg);
+  const home = ROUTE[STOP.home];
+  el('rect', { x: home[0] - 16, y: home[1] - 16, width: 32, height: 32, fill: PAPER, stroke: INK, 'stroke-width': 2 }, svg);
+  const stops = ['school', 'station', 'hospital', 'shrine', 'warehouse'].map(k => ({
+    t: stopT(k),
+    n: el('rect', { x: ROUTE[STOP[k]][0] - 7, y: ROUTE[STOP[k]][1] - 7, width: 14, height: 14, fill: PAPER, stroke: INK, 'stroke-width': 1.6 }, svg)
+  }));
+
+  // 로이스의 대상이 있는 곳. 붉은 끈이 하루카와 이어진다
+  const PINS = {
+    miyu: { name: '미유', at: ROUTE[STOP.home], dx: -4, dy: 50 },
+    ren: { name: '렌', at: ROUTE[STOP.school], dx: -4, dy: -52 },
+    teacher: { name: '선생님', at: [ROUTE[STOP.school][0] + 44, ROUTE[STOP.school][1] + 26], dx: 0, dy: 52 },
+    mother: { name: '어머니', at: [ROUTE[STOP.home][0] + 40, ROUTE[STOP.home][1] - 30], dx: 8, dy: -28 }
+  };
+  const pinEls = {};
+  for (const k in PINS) {
+    const p = PINS[k], g = el('g', { opacity: 0 }, svg);
+    const line = el('path', { fill: 'none', stroke: RED, 'stroke-width': 2.4 }, strings);
+    el('text', { x: p.at[0] + p.dx, y: p.at[1] + p.dy, 'text-anchor': 'middle', class: 'map-tag', 'font-size': 26, fill: INK }, g, p.name);
+    pinEls[k] = { g, line };
+  }
+
+  const tag = el('g', {}, svg);
+  el('rect', { x: -10, y: -10, width: 20, height: 20, fill: RED }, tag);
+  el('text', { x: 0, y: 46, 'text-anchor': 'middle', class: 'map-tag', 'font-size': 24, fill: INK }, tag, '하루카');
+
+  const tStation = stopT('station');
+  const STEPS = [
+    // f: 화면에 담을 지도의 [왼쪽 x, 오른쪽 x, 중심 y]
+    { t: .02, e: .3, pins: 1, f: [50, 630, 620], cap: '왼쪽 눈금이 하루카의 침식률입니다. 기억할 기준선은 100% 하나입니다.' },
+    { t: tStation, e: .5, pins: 1, f: [140, 880, 610], cap: '학교와 역에 등장할 때마다 눈금이 오르고 격자가 휩니다.' },
+    { t: tStation, e: .62, pins: 1, f: [140, 880, 610], cap: '이야기에 깊이 관여할수록 침식률은 오릅니다.' }
+  ];
+
+  const state = { step: 0, t: .02, k: .3 };
+  let run = 0;
+
+  function paint() {
+    const end = tip(state.t), s = STEPS[state.step];
+    route.setAttribute('d', taper(state.t, 1));
+    grid.setAttribute('d', gridPath(end[0], end[1], state.k));
+    bits(end[0], end[1], state.k);
+    tag.setAttribute('transform', `translate(${end[0]} ${end[1]})`);
+    stops.forEach(r => r.n.setAttribute('fill', state.t + .001 >= r.t ? INK : PAPER));
+    for (const k in PINS) {
+      const p = PINS[k], e = pinEls[k];
+      const dist = Math.hypot(end[0] - p.at[0], end[1] - p.at[1]);
+      const mx = (end[0] + p.at[0]) / 2, my = Math.min(end[1], p.at[1]) - 30 - dist * .17;
+      e.line.setAttribute('d', `M${end[0]} ${end[1]}Q${mx} ${my} ${p.at[0]} ${p.at[1]}`);
+      e.line.setAttribute('opacity', s.pins ? 1 : 0);
+      e.g.setAttribute('opacity', s.pins ? 1 : 0);
+    }
+  }
+
+  function moveTo(f) {
+    const w = stage.clientWidth, h = stage.clientHeight;
+    const gl = narrow.matches ? 46 : 58, gr = narrow.matches ? 10 : 44, cb = caption.offsetHeight;
+    const usable = w - gl - gr;
+    const s = Math.max(Math.min(usable / (f[1] - f[0]), 1.6), w / 1600, h / 2000);
+    let tx = gl + usable / 2 - (f[0] + f[1]) / 2 * s, ty = (h - cb) / 2 - (f[2] + 500) * s;
+    tx = Math.min(0, Math.max(w - 1600 * s, tx));
+    ty = Math.min(0, Math.max(h - 2000 * s, ty));
+    plane.style.transform = `translate(${tx}px, ${ty}px) scale(${s})`;
+    svg.style.setProperty('--tag', Math.max(22, Math.min(36, 15 / s)) + 'px');
+  }
+
+  function apply(animated) {
+    const s = STEPS[state.step];
+    caption.textContent = s.cap;
+    moveTo(s.f);
+    stage.style.setProperty('--e', s.e);
+    [...legs.children].forEach((li, i) => { li.dataset.s = i < state.step ? 'past' : i === state.step ? 'now' : 'next'; });
+    const id = ++run, from = { t: state.t, k: state.k };
+    if (!animated) { state.t = s.t; state.k = s.e; paint(); return; }
+    animate(900, p => {
+      if (id !== run) return;
+      state.t = from.t + (s.t - from.t) * p;
+      state.k = from.k + (s.e - from.k) * p;
+      paint();
+    });
+  }
+
+  STEPS.forEach((_, i) => {
+    const item = document.createElement('li'), a = document.createElement('a');
+    a.href = '#s' + (i + 1);
+    a.setAttribute('aria-label', (i + 1) + '번째 구간');
+    a.appendChild(document.createElement('i'));
+    item.appendChild(a); legs.appendChild(item);
+  });
+
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(en => {
+      if (!en.isIntersecting) return;
+      const n = +en.target.dataset.step;
+      if (n !== state.step) { state.step = n; apply(true); }
+    });
+  }, { rootMargin: '-48% 0px -48% 0px' });
+  document.querySelectorAll('.text section').forEach(s => io.observe(s));
+
+  addEventListener('resize', () => moveTo(STEPS[state.step].f));
+  apply(false);
+})();
+</script>
+</body>
+</html>

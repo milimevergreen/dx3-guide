@@ -1,0 +1,329 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>클라이맥스 페이즈 및 전투 | 더블크로스 입문 브리핑</title>
+<meta name="description" content="클라이맥스 전투의 라운드와 네 가지 프로세스, 액션, 침식률의 힘, 전투 불능과 타이터스를 하루카의 전투와 함께 설명합니다.">
+<meta name="theme-color" content="#f7f7f7">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='16' height='16' fill='%23cd3131'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/wanteddev/wanted-sans@v1.0.3/packages/wanted-sans/fonts/webfonts/variable/split/WantedSansVariable.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;700&family=Noto+Sans+JP:wght@500;700&display=swap">
+<link rel="stylesheet" href="assets/style.css">
+<link rel="stylesheet" href="assets/pages.css">
+</head>
+<body data-guide="5">
+<header class="top">
+  <a class="brand" href="index.html"><i aria-hidden="true"></i>DX3 입문 브리핑</a>
+  <p class="rights">비공식 팬 사이트입니다. 야노 슌사쿠와 유한회사 F.E.A.R.이 권리를 가진 『더블크로스 The 3rd Edition』의 2차 창작물입니다.</p>
+</header>
+
+<button class="menu-btn" id="menu-btn" type="button" aria-expanded="false" aria-controls="nav" aria-label="메뉴 열기">
+  <span class="menu-roll" aria-hidden="true"><span>메뉴</span><span>닫기</span></span>
+  <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M7 0v14M0 7h14"/></svg>
+</button>
+
+<div class="nav" id="nav" inert>
+  <div class="nav-scrim"></div>
+  <div class="nav-panel">
+    <div class="nav-bg" aria-hidden="true"><i></i><i></i><i></i></div>
+    <svg class="nav-shapes" viewBox="0 0 400 400" fill="none" stroke="#f7f7f7" stroke-width="1.5" aria-hidden="true">
+      <g data-shape="1">
+        <path d="M200 40C290 36 362 110 356 200C350 296 284 362 196 358C104 354 40 290 46 196C52 106 112 44 200 40Z"/>
+        <path d="M204 96C262 96 306 142 300 200C294 262 250 304 196 300C140 296 100 250 106 196C112 140 150 96 204 96Z"/>
+        <path d="M202 150C232 150 252 172 250 200C248 230 226 250 198 248C170 246 152 226 154 198C156 170 174 150 202 150Z"/>
+        <rect x="190" y="190" width="20" height="20" fill="#cd3131" stroke="none"/>
+      </g>
+      <g data-shape="2">
+        <path d="M30 150L370 196V204L30 250Z" fill="#cd3131" stroke="none"/>
+        <rect x="44" y="290" width="16" height="16"/>
+        <rect x="90" y="290" width="16" height="16" fill="#f7f7f7"/>
+        <rect x="136" y="290" width="16" height="16"/>
+        <rect x="182" y="290" width="16" height="16"/>
+        <rect x="228" y="290" width="16" height="16"/>
+        <rect x="274" y="290" width="16" height="16"/>
+        <rect x="320" y="290" width="16" height="16"/>
+      </g>
+      <g data-shape="3">
+        <path d="M200 30L352 160V236L200 370L48 236V160Z"/>
+        <path d="M200 30L282 214L200 266L118 214Z"/>
+        <path d="M118 214L48 236M282 214L352 236M200 266V370"/>
+        <text x="200" y="198" text-anchor="middle" font-size="64" font-weight="800" fill="#f7f7f7" stroke="none">10</text>
+      </g>
+      <g data-shape="4">
+        <path d="M70 60H220V340H70Z"/>
+        <path d="M180 92H330V340H180Z" fill="#141414"/>
+        <path d="M204 132H306M204 158H306M204 184H270"/>
+        <text x="96" y="124" font-size="44" font-weight="800" fill="#f7f7f7" stroke="none">1</text>
+        <text x="282" y="318" font-size="44" font-weight="800" fill="#f7f7f7" stroke="none">2</text>
+      </g>
+      <g data-shape="5">
+        <path d="M60 80h44v44H60zM122 80h44v44h-44zM184 80h44v44h-44zM246 80h44v44h-44zM308 80h44v44h-44z"/>
+        <path d="M60 150h44v44H60zM122 150h44v44h-44zM184 150h44v44h-44zM246 150h44v44h-44zM308 150h44v44h-44z"/>
+        <path d="M60 220h44v44H60zM122 220h44v44h-44zM184 220h44v44h-44zM246 220h44v44h-44zM308 220h44v44h-44z"/>
+        <path d="M60 290h44v44H60zM122 290h44v44h-44zM184 290h44v44h-44z"/>
+        <rect x="184" y="150" width="44" height="44" fill="#f7f7f7"/>
+      </g>
+    </svg>
+
+    <nav class="nav-scroll" aria-label="전체 메뉴">
+      <ul class="nav-list">
+        <li data-shape="1" style="--i:0"><div class="nav-row"><a class="nav-link" href="index.html"><span class="nav-no">01</span><span class="nav-clip"><span class="nav-word">홈</span></span><span class="nav-dot"></span></a></div></li>
+        <li data-shape="2" style="--i:1"><div class="nav-row"><a class="nav-link" href="guide-1.html" aria-current="true"><span class="nav-no">02</span><span class="nav-clip"><span class="nav-word">가이드</span></span><span class="nav-dot"></span></a><button class="nav-toggle" type="button" aria-expanded="true" aria-controls="sub-guide" aria-label="가이드 하위 메뉴"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M7 0v14M0 7h14"/></svg></button></div><div class="nav-sub" id="sub-guide"><ol class="sub-guides"><li><a class="sub-top" href="guide-1.html"><span class="nav-sno">01</span>세계관</a></li><li><a class="sub-top" href="guide-2.html"><span class="nav-sno">02</span>프리플레이 및 캐릭터 작성</a></li><li><a class="sub-top" href="guide-3.html"><span class="nav-sno">03</span>오프닝 페이즈</a></li><li><a class="sub-top" href="guide-4.html"><span class="nav-sno">04</span>미들 페이즈 및 판정</a></li><li><a class="sub-top" href="guide-5.html" aria-current="page"><span class="nav-sno">05</span>클라이맥스 페이즈 및 전투</a></li><li><a class="sub-top" href="guide-6.html"><span class="nav-sno">06</span>백트랙 및 엔딩</a></li><li><a class="sub-top" href="guide-7.html"><span class="nav-sno">07</span>첫 세션 준비</a></li></ol></div></li>
+        <li data-shape="3" style="--i:2"><div class="nav-row"><a class="nav-link" href="tool-dice.html"><span class="nav-no">03</span><span class="nav-clip"><span class="nav-word">체험 도구</span></span><span class="nav-dot"></span></a><button class="nav-toggle" type="button" aria-expanded="false" aria-controls="sub-tools" aria-label="체험 도구 하위 메뉴"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M7 0v14M0 7h14"/></svg></button></div><div class="nav-sub" id="sub-tools" hidden><ol class="sub-guides"><li><a class="sub-top" href="tool-dice.html"><span class="nav-sno">01</span>판정 다이스 체험</a></li><li><a class="sub-top" href="tool-syndrome.html"><span class="nav-sno">02</span>신드롬 조합 탐색</a></li></ol></div></li>
+        <li data-shape="5" style="--i:3"><div class="nav-row"><a class="nav-link" href="glossary.html"><span class="nav-no">04</span><span class="nav-clip"><span class="nav-word">용어집</span></span><span class="nav-dot"></span></a></div></li>
+      </ul>
+      <div class="nav-foot">
+        <p data-fade style="--f:0">비공식 팬 사이트입니다. <a href="about.html">사이트 안내</a></p>
+        <p class="mono" data-fade style="--f:1">ESC</p>
+      </div>
+    </nav>
+  </div>
+</div>
+
+<div class="title-band">
+  <p class="giant-no" aria-hidden="true">05</p>
+  <div class="guide-title">
+    <h1>클라이맥스 페이즈 및 전투</h1>
+    
+  </div>
+  <div class="steps-wrap">
+    <p class="mono" aria-hidden="true">05 / 07</p>
+    <ol class="steps" aria-label="가이드 7단계 중 5단계"><li class="past"></li><li class="past"></li><li class="past"></li><li class="past"></li><li class="now" aria-current="step"></li><li></li><li></li></ol>
+  </div>
+</div>
+<main class="read">
+<aside class="stage dg" id="stage" aria-label="본문의 진행을 보여주는 전투 도식">
+  <div class="dg-wrap">
+    <svg class="dgs" viewBox="0 0 640 440" aria-hidden="true">
+      <g data-on="0">
+        <rect class="dash" x="90" y="90" width="460" height="250"/>
+        <text class="big" x="320" y="200" text-anchor="middle">충동판정</text>
+        <g class="f hot"><rect x="210" y="236" width="220" height="56"/><text x="320" y="272" text-anchor="middle">침식률 +2D10</text></g>
+      </g>
+      <!-- 라운드: 네 프로세스가 돌고, 모두가 행동 완료할 때까지 이어진다 -->
+      <g data-on="1,2,3,7">
+        <path class="ln" d="M395 66H500V158M500 228V374H395M245 374H140V228M140 158V66H245"/>
+        <path class="ln" d="M494 150l6 8 6-8M401 368l-6 6 6 6M134 236l6-8 6 8M239 60l6 6-6 6"/>
+        <g class="f" data-hot="2"><rect x="245" y="36" width="150" height="60"/><text x="320" y="74" text-anchor="middle">셋업</text></g>
+        <g class="f" data-hot="3"><rect x="415" y="164" width="170" height="60"/><text x="500" y="202" text-anchor="middle">이니셔티브</text></g>
+        <g class="f"><rect x="245" y="344" width="150" height="60"/><text x="320" y="382" text-anchor="middle">메인</text></g>
+        <g class="f" data-hot="7"><rect x="55" y="164" width="170" height="60"/><text x="140" y="202" text-anchor="middle">클린업</text></g>
+        <g data-on="1"><text class="big" x="320" y="200" text-anchor="middle">한 라운드</text><text class="sm" x="320" y="232" text-anchor="middle">모두가 행동 완료할 때까지</text></g>
+        <g data-on="3"><text class="big" x="320" y="215" text-anchor="middle">행동치순</text></g>
+      </g>
+      <g data-on="4">
+        <g class="f hot"><rect x="210" y="20" width="220" height="56"/><text x="320" y="56" text-anchor="middle">메인 프로세스</text></g>
+        <path class="ln" d="M320 76V104M110 104H530M110 104V128M320 104V128M530 104V128"/>
+        <g class="f"><rect x="20" y="128" width="180" height="50"/><text x="110" y="160" text-anchor="middle">마이너 액션</text></g>
+        <g class="f"><rect x="230" y="128" width="180" height="50"/><text x="320" y="160" text-anchor="middle">메이저 액션</text></g>
+        <g class="f"><rect x="440" y="128" width="180" height="50"/><text x="530" y="160" text-anchor="middle">오토 액션</text></g>
+        <g class="f"><rect x="20" y="218" width="180" height="50"/><text x="110" y="250" text-anchor="middle">리액션</text></g>
+        <g class="f"><rect x="230" y="218" width="180" height="50"/><text x="320" y="250" text-anchor="middle">대기</text></g>
+        <g class="f"><rect x="440" y="218" width="180" height="50"/><text x="530" y="250" text-anchor="middle">행동 포기</text></g>
+        <text class="sm" x="320" y="320" text-anchor="middle">이니셔티브 프로세스에서 고른 캐릭터가 행동합니다</text>
+      </g>
+      <g data-on="5">
+        <text class="sm" x="20" y="46">마이너 액션 · 메이저 직전</text>
+        <g class="f"><rect x="20" y="62" width="280" height="50"/><text x="36" y="94">전투 이동</text></g>
+        <g class="f"><rect x="20" y="118" width="280" height="50"/><text x="36" y="150">마이너 이펙트</text></g>
+        <g class="f"><rect x="20" y="174" width="280" height="50"/><text x="36" y="206">장비품 변경</text></g>
+        <g class="f"><rect x="20" y="230" width="280" height="50"/><text x="36" y="262">배드 스테이터스 회복</text></g>
+        <text class="sm" x="340" y="46">메이저 액션 · 본공격</text>
+        <g class="f hot"><rect x="340" y="62" width="280" height="50"/><text x="356" y="94">본공격</text></g>
+        <g class="f"><rect x="340" y="118" width="280" height="50"/><text x="356" y="150">전력이동</text></g>
+        <g class="f"><rect x="340" y="174" width="280" height="50"/><text x="356" y="206">메이저 이펙트</text></g>
+        <g class="f"><rect x="340" y="230" width="280" height="50"/><text x="356" y="262">장비품·소지품 사용</text></g>
+        <g class="f"><rect x="340" y="286" width="280" height="50"/><text x="356" y="318">결정타</text></g>
+      </g>
+      <g data-on="6">
+        <g class="f"><rect x="20" y="40" width="190" height="64"/><text x="115" y="80" text-anchor="middle">메이저 액션</text></g>
+        <path class="ln" d="M210 72H270M262 66l8 6-8 6"/>
+        <g class="f hot"><rect x="280" y="40" width="190" height="64"/><text x="375" y="80" text-anchor="middle">리액션 1번</text></g>
+        <text class="sm" x="20" y="150">보통 메이저 액션을 한 캐릭터와의 대결이 됩니다</text>
+        <text class="sm" x="20" y="180">메이저 액션 1번에 리액션은 1번만</text>
+        <g class="f"><rect x="20" y="240" width="600" height="70"/><text x="40" y="284">오토 액션 · 선언만으로 하는 대화와 이펙트</text></g>
+      </g>
+      <g data-on="8">
+        <rect class="dash" x="40" y="90" width="270" height="250"/>
+        <rect class="dash" x="360" y="90" width="240" height="250"/>
+        <g class="f hot"><rect x="100" y="180" width="56" height="56"/></g>
+        <g class="f"><rect x="190" y="180" width="56" height="56"/></g>
+        <g class="f"><rect x="452" y="180" width="56" height="56"/></g>
+        <text x="175" y="70" text-anchor="middle">같은 인게이지</text>
+        <text x="480" y="70" text-anchor="middle">다른 인게이지</text>
+      </g>
+      <g data-on="9">
+        <text class="sm" x="160" y="30" text-anchor="middle">침식률</text>
+        <path class="ln" d="M160 48V410M140 112H180"/>
+        <text class="sm" x="128" y="118" text-anchor="end">100%</text>
+        <rect x="156" y="140" width="9" height="270" fill="#cd3131"/>
+        <text class="sm" x="290" y="120">강해지는 힘</text>
+        <g class="f"><rect x="290" y="336" width="36" height="36"/><rect x="334" y="336" width="36" height="36"/></g>
+        <g class="f"><rect x="290" y="252" width="36" height="36"/><rect x="334" y="252" width="36" height="36"/><rect x="378" y="252" width="36" height="36"/></g>
+        <g class="f hot"><rect x="290" y="168" width="36" height="36"/><rect x="334" y="168" width="36" height="36"/><rect x="378" y="168" width="36" height="36"/><rect x="422" y="168" width="36" height="36"/></g>
+      </g>
+      <g data-on="10">
+        <g class="f hot"><rect x="210" y="30" width="220" height="70"/><text x="320" y="74" text-anchor="middle">전투 불능</text></g>
+        <path class="ln" d="M320 100V160M150 160H490M150 160V230M490 160V230"/>
+        <text x="150" y="146" text-anchor="middle">100% 미만</text>
+        <text x="490" y="146" text-anchor="middle">100% 이상</text>
+        <g class="f"><rect x="40" y="230" width="220" height="70"/><text x="150" y="274" text-anchor="middle">리저렉트</text></g>
+        <g class="f"><rect x="380" y="230" width="220" height="70"/><text x="490" y="274" text-anchor="middle">타이터스 승화</text></g>
+      </g>
+      <g data-on="11,12" id="lois-cells">
+        <text class="sm" x="320" y="70" text-anchor="middle">하루카의 로이스</text>
+        <g class="f host" data-k="miyu"><rect x="20" y="110" width="112" height="150"/><text x="76" y="194" text-anchor="middle">미유</text></g>
+        <g class="f gone" data-k="ren"><rect x="142" y="110" width="112" height="150"/><text x="198" y="194" text-anchor="middle">렌</text></g>
+        <g class="f" data-k="teacher"><rect x="264" y="110" width="112" height="150"/><text x="320" y="194" text-anchor="middle">선생님</text></g>
+        <g class="f" data-k="mother"><rect x="386" y="110" width="112" height="150"/><text x="442" y="194" text-anchor="middle">어머니</text></g>
+        <g class="f" data-k="shinoda"><rect x="508" y="110" width="112" height="150"/><text x="564" y="194" text-anchor="middle">시노다</text></g>
+        <path class="xm on" d="M154 128l88 114M242 128l-88 114"/>
+        <text class="cut-label" x="76" y="300" text-anchor="middle">기생당함</text>
+        <text class="cut-label" id="cut-label" x="198" y="300" text-anchor="middle">타이터스</text>
+        <text class="sm" x="320" y="380" text-anchor="middle">남은 로이스 4</text>
+      </g>
+    </svg>
+  </div>
+  <p class="caption" id="caption" aria-live="polite"></p>
+  <ol class="legs" id="legs" aria-label="이 페이지의 구간"></ol>
+</aside>
+
+<article class="text">
+  <section id="s1" data-step="0" data-cap="클라이맥스. 충동판정으로 침식률이 2D10 오릅니다.">
+    <h2>클라이맥스 페이즈</h2>
+    <p>사건의 끝을 가르는 최종 전투입니다. 이펙트를 아낌없이 쓰면서 침식률은 100%를 넘어가곤 합니다.</p>
+    <p>클라이맥스 전투가 시작될 때 GM의 지시로 충동판정을 하며, 그 결과와 관계없이 침식률이 2D10 오릅니다.</p>
+    <div class="story">
+      <p class="story-h">하루카의 클라이맥스 · 대치</p>
+      <p>창고 거리. 그림자에 ‘무언가’가 들러붙은 미유가 하루카 일행 앞에 적(에너미)으로 서 있습니다. 미유는 아직 졈이 아닙니다. 미유를 해치지 않고 그림자에 기생한 ‘무언가’를 떼어 내면, 미유를 데리고 돌아올 수 있습니다.</p>
+      <p>GM의 지시로 모두 충동판정을 합니다. 하루카의 침식률이 2D10만큼 오르며, 전투가 시작됩니다.</p>
+    </div>
+  </section>
+
+  <section id="s2" data-step="1" data-cap="한 라운드는 네 프로세스로 이루어집니다.">
+    <h2>라운드는 네 단계로 돕니다</h2>
+    <p>더블크로스의 전투는 라운드로 처리됩니다. 한 라운드는 셋업 프로세스, 이니셔티브 프로세스, 메인 프로세스, 클린업 프로세스 네 개로 이루어집니다.</p>
+    <p>이니셔티브와 메인 프로세스는 번갈아 반복되며, 이 라운드에 참가한 모든 캐릭터가 메인 프로세스를 진행해 행동 완료 상태가 될 때까지 이어집니다. 그 뒤에 클린업 프로세스로 라운드를 마무리합니다.</p>
+  </section>
+
+  <section id="s3" data-step="2" data-cap="라운드가 시작되면 먼저 셋업 프로세스입니다.">
+    <h2>셋업 프로세스</h2>
+    <p>라운드 개시 직후의 프로세스로, 씬에 존재하는 캐릭터를 확인합니다. 타이밍이 셋업 프로세스인 이펙트나 행동은 이때 선언합니다.</p>
+    <p>처리할 내용이 없다면 ‘셋없’, 혹은 ‘처리 내용 없음’ 등으로 처리할 내용이 없다는 의사를 표현해야 합니다.</p>
+    <div class="story">
+      <p class="story-h">하루카의 클라이맥스 · 셋업</p>
+      <p>하루카의 셋업. 선언할 이펙트가 없는 하루카는 “셋없”이라고 말합니다. 다른 PC들도 차례로 “셋없”을 말하고, GM도 미유(에너미)의 셋업에 처리할 내용이 없다고 알립니다.</p>
+    </div>
+  </section>
+
+  <section id="s4" data-step="3" data-cap="행동치가 높은 캐릭터가 먼저 행동합니다.">
+    <h2>이니셔티브 프로세스</h2>
+    <p>아직 행동하지 않은 캐릭터 가운데 누가 다음 메인 프로세스에서 행동할지를 정하는 프로세스입니다. 행동치가 가장 높은 캐릭터가 다음 메인 프로세스를 진행합니다.</p>
+    <p>일부 이펙트를 쓰면 행동치를 무시하고 행동하는 캐릭터가 나오기도 합니다. 일단은 행동치가 가장 높은 캐릭터에게 먼저 차례가 돌아온다고 이해하면 편합니다.</p>
+    <div class="story">
+      <p class="story-h">하루카의 클라이맥스 · 이니셔티브</p>
+      <p>하루카의 행동치는 가장 높은 편입니다. 이니셔티브 프로세스에서 아직 행동하지 않은 캐릭터 가운데 행동치가 가장 높은 하루카가 선정되어, 이번 라운드의 첫 메인 프로세스를 진행합니다.</p>
+    </div>
+  </section>
+
+  <section id="s5" data-step="4" data-cap="메인 프로세스에서 캐릭터가 하는 행동을 액션이라고 합니다.">
+    <h2>메인 프로세스</h2>
+    <p>이니셔티브 프로세스에서 정해진 캐릭터가 행동합니다. 메인 프로세스 중 캐릭터가 하는 행동을 액션이라고 부르며, 캐릭터는 마이너 액션, 메이저 액션, 오토 액션, 리액션, 대기, 행동 포기를 할 수 있습니다.</p>
+  </section>
+
+  <section id="s6" data-step="5" data-cap="마이너 액션 뒤에 메이저 액션을 하면 행동 완료가 됩니다.">
+    <h2>내 차례: 마이너 액션과 메이저 액션</h2>
+    <p>마이너 액션은 메이저 액션 직전에 수행합니다. 전투 이동, 타이밍이 마이너 액션인 이펙트 사용, 장비품 변경, 배드 스테이터스 회복에 쓸 수 있습니다.</p>
+    <p>메이저 액션은 본공격입니다. 전력이동, 타이밍이 메이저 액션인 이펙트 사용, 장비품·소지품 사용, 배드 스테이터스 회복, 결정타(전투 불능인 캐릭터를 사망시키는 것)에도 쓸 수 있습니다. 메이저 액션을 하면 캐릭터는 행동 완료 상태가 됩니다.</p>
+    <p>공격도 판정입니다. 가이드 4에서 굴린 방식 그대로 다이스를 굴려 달성치를 냅니다.</p>
+    <div class="story">
+      <p class="story-h">하루카의 클라이맥스 · 첫 액션</p>
+      <p>하루카는 마이너 액션으로 전투 이동을 해 미유의 곁으로 달려가고, 메이저 액션으로 〈백병〉 공격을 선언합니다. 노리는 곳은 미유가 아니라, 미유의 발치에서 일렁이는 그림자입니다.</p>
+    </div>
+  </section>
+
+  <section id="s7" data-step="6" data-cap="리액션만으로 행동 완료가 되지는 않습니다.">
+    <h2>남의 차례: 리액션과 오토 액션</h2>
+    <p>리액션은 다른 캐릭터의 메이저 액션에 대응하는 액션입니다. 1번의 메이저 액션당 1번만 할 수 있으며, 보통 메이저 액션을 한 캐릭터와의 대결이 됩니다. 행동 완료 상태에서도 할 수 있고, 리액션을 하는 것만으로 행동 완료가 되지는 않습니다.</p>
+    <p>오토 액션은 마이너 액션이나 메이저 액션을 쓰지 않고 선언만으로 할 수 있는 대화, 이펙트 사용의 타이밍입니다.</p>
+    <div class="story">
+      <p class="story-h">하루카의 클라이맥스 · 리액션과 오토 액션</p>
+      <p>하루카의 공격에 그림자가 미유의 몸을 휘감아 막으려 합니다. GM은 미유(에너미)의 리액션으로 〈회피〉를 선언하고, 하루카의 〈백병〉 달성치와 대결합니다. 하루카의 달성치가 높아, 그림자의 일부가 미유에게서 떨어져 나갑니다.</p>
+      <p>그때 시노다가 오토 액션으로 하루카에게 소리칩니다. “미유를 믿어! 아직 안에 있다!”</p>
+    </div>
+  </section>
+
+  <section id="s8" data-step="7" data-cap="라운드를 마무리하는 클린업 프로세스입니다.">
+    <h2>클린업 프로세스</h2>
+    <p>라운드를 마무리하는 단계입니다. 클린업 프로세스에서는 대미지를 입히는 이펙트나 아이템의 대미지를 처리하고, 일부 배드 스테이터스의 효과를 끝내며, 라운드 종료까지 지속되는 이펙트의 효과를 끝냅니다. 타이밍이 클린업 프로세스인 이펙트도 이때 사용합니다.</p>
+    <p>이때에도 처리할 내용이 없다면 ‘클없’, 혹은 ‘처리 내용 없음’ 등으로 처리할 내용이 없다는 의사를 표현해야 합니다. 클린업 프로세스가 끝나면 다음 라운드의 셋업 프로세스로 돌아갑니다.</p>
+    <div class="story">
+      <p class="story-h">하루카의 클라이맥스 · 클린업</p>
+      <p>모든 캐릭터가 행동을 마치자 클린업 프로세스입니다. 하루카가 쓴 이펙트의 지속 효과가 끝나고, 처리할 대미지는 없어 하루카는 “클없”을 말합니다. 라운드가 끝나고, 다음 라운드의 셋업 프로세스가 시작됩니다.</p>
+    </div>
+  </section>
+
+  <section id="s9" data-step="8" data-cap="공격 가능 범위에 있으면 인게이지하고 있다고 합니다.">
+    <h2>인게이지</h2>
+    <p>인게이지는 거리와 구역을 나타내는 단위입니다. 공격 가능 범위에 다른 캐릭터가 있는 상태를 '동일 인게이지에 있다', '인게이지하고 있다'고 표현합니다.</p>
+  </section>
+
+  <section id="s10" data-step="9" data-cap="침식률이 오를수록 쓸 수 있는 힘도 커집니다.">
+    <h2>힘과 자신의 등가교환</h2>
+    <p>침식률이 일정 수치에 이를 때마다 판정에 사용할 수 있는 보너스 다이스가 추가되고, 이펙트의 레벨이 상승하거나, 더 강한 이펙트를 사용할 수 있게 됩니다. 즉, 침식률이 높은 캐릭터는 데이터 상으로도 강해지는 것입니다.</p>
+    <p>자신을 깎아 가며 더욱 강해질 것인가, 혹은 힘을 포기하는 대신 자신을 유지할 것인가의 딜레마가 이 룰의 핵심 시스템이라 할 수 있습니다.</p>
+    <div class="story">
+      <p class="story-h">하루카의 클라이맥스 · 힘을 끌어 쓰다</p>
+      <p>다음 라운드, 하루카는 이펙트를 거듭 쓰며 그림자를 떼어 냅니다. 이펙트의 침식치가 쌓여 침식률이 오를수록 하루카의 공격은 거세지지만, 100%라는 기준선도 점점 가까워집니다.</p>
+    </div>
+  </section>
+
+  <section id="s11" data-step="10" data-cap="침식률에 따라 일어나는 방법이 다릅니다.">
+    <h2>쓰러졌을 때</h2>
+    <p>전투 불능이 된 시점의 침식률이 100% 미만이면 리저렉트로 일어날 수 있습니다. 룰북 1권 151쪽을 참고해 주십시오.</p>
+    <p>100% 이상이면 타이터스 승화가 있어야 회복할 수 있습니다. 일어나기 위해 인연을 끊어야 하는 순간이 여기서 찾아옵니다.</p>
+    <div class="story">
+      <p class="story-h">하루카의 클라이맥스 · 쓰러지다</p>
+      <p>미유의 그림자에서 ‘무언가’를 거의 떼어 낸 순간, 마지막 반격이 하루카를 쓰러뜨립니다. 전투 불능. 하루카의 침식률은 이미 100%를 넘어서 리저렉트를 쓸 수 없습니다.</p>
+      <p>미유를 되찾으려면 일어나야 하고, 일어나려면 타이터스를 승화해야 합니다.</p>
+    </div>
+  </section>
+
+  <section id="s12" data-step="11" data-cap="끊어진 로이스가 타이터스입니다.">
+    <h2>타이터스</h2>
+    <p>로이스가 사망하거나, PC를 배신하거나, 단순히 심정이 변화해 로이스를 향하는 감정 자체가 바뀌어 더 이상 PC를 일상에 붙들지 못하게 되는 순간, 로이스는 끊어집니다. 이렇듯 힘을 잃어버린 로이스를 타이터스라고 지칭합니다.</p>
+    <p>예컨대 미유가 ‘무언가’에 완전히 삼켜져 졈이 되었다면, 미유를 향한 하루카의 '애정'은 '죄책감'으로 바뀌고 미유와의 로이스는 강제로 타이터스가 되었을 것입니다. 이처럼 로이스의 대상이 졈이 되거나 사망하면, 이야기의 흐름에 따라 로이스가 강제로 타이터스가 되기도 합니다. 하지만 미유는 아직 졈이 아니기에, 미유와의 로이스는 끊어지지 않았습니다.</p>
+    <div class="story">
+      <p class="story-h">하루카의 클라이맥스 · 로이스를 끊다</p>
+      <p>하루카는 반 친구 렌과의 로이스를 끊기로 합니다. 렌을 향한 '우정'과 '열등감' 가운데, 하루카는 오랜 열등감을 놓아 보내기로 합니다. 렌과의 로이스는 타이터스가 되고, 하루카가 가진 로이스는 하나 줄어 넷이 됩니다.</p>
+    </div>
+  </section>
+
+  <section id="s13" data-step="12" data-cap="승화한 타이터스는 다시 쓸 수 없습니다.">
+    <h2>타이터스의 승화</h2>
+    <p>로이스가 끊어진 뒤의 타이터스는 자원으로써 활용이 가능합니다. 사용된 타이터스는 승화되었다고 표현하며, 더 이상은 사용할 수 없습니다.</p>
+    <p>타이터스 승화의 효과는 가장 대표적인 '전투불능에서 회복' 외에도 여러 종류가 있으니, 룰1의 P189를 참고하여 활용해 보십시오.</p>
+    <div class="story">
+      <p class="story-h">하루카의 클라이맥스 · 승화</p>
+      <p>하루카는 렌의 타이터스를 승화해 전투 불능에서 일어납니다. 렌에게 품어 온 열등감마저 힘으로 바꾸어, 마지막으로 미유의 그림자를 움켜쥡니다.</p>
+      <p>그림자에서 ‘무언가’가 떨어져 나가 비명과 함께 흩어지고, 미유가 하루카의 품으로 쓰러집니다. 숨소리는 고릅니다. 사건의 끝이 보입니다.</p>
+    </div>
+  </section>
+<nav class="pager" aria-label="이전과 다음 가이드"><a href="guide-4.html">이전: 미들 페이즈 및 판정</a><a href="guide-6.html">다음: 백트랙 및 엔딩</a></nav></article>
+
+</main>
+<footer class="site-foot"><p>비공식 팬 사이트입니다. 야노 슌사쿠와 유한회사 F.E.A.R.이 권리를 가진 『더블크로스 The 3rd Edition』의 2차 창작물입니다.</p><p><a href="about.html">사이트 안내</a> <a href="glossary.html">용어집</a></p></footer>
+
+<script src="assets/menu.js"></script>
+<script src="assets/site.js"></script>
+<script>
+GuideStage({ onStep(i) {
+  const l = document.getElementById('cut-label');
+  if (l) l.textContent = i >= 12 ? '승화' : '타이터스';
+} });
+</script>
+</body>
+</html>

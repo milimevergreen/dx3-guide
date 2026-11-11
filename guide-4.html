@@ -1,0 +1,319 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>미들 페이즈 및 판정 | 더블크로스 입문 브리핑</title>
+<meta name="description" content="미들 페이즈의 씬들과 로이스 취득, 정보수집, 판정을 하루카의 미들 페이즈와 함께 설명합니다.">
+<meta name="theme-color" content="#f7f7f7">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='16' height='16' fill='%23cd3131'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/wanteddev/wanted-sans@v1.0.3/packages/wanted-sans/fonts/webfonts/variable/split/WantedSansVariable.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;700&family=Noto+Sans+JP:wght@500;700&display=swap">
+<link rel="stylesheet" href="assets/style.css">
+<link rel="stylesheet" href="assets/pages.css">
+</head>
+<body data-guide="4">
+<header class="top">
+  <a class="brand" href="index.html"><i aria-hidden="true"></i>DX3 입문 브리핑</a>
+  <p class="rights">비공식 팬 사이트입니다. 야노 슌사쿠와 유한회사 F.E.A.R.이 권리를 가진 『더블크로스 The 3rd Edition』의 2차 창작물입니다.</p>
+</header>
+
+<button class="menu-btn" id="menu-btn" type="button" aria-expanded="false" aria-controls="nav" aria-label="메뉴 열기">
+  <span class="menu-roll" aria-hidden="true"><span>메뉴</span><span>닫기</span></span>
+  <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M7 0v14M0 7h14"/></svg>
+</button>
+
+<div class="nav" id="nav" inert>
+  <div class="nav-scrim"></div>
+  <div class="nav-panel">
+    <div class="nav-bg" aria-hidden="true"><i></i><i></i><i></i></div>
+    <svg class="nav-shapes" viewBox="0 0 400 400" fill="none" stroke="#f7f7f7" stroke-width="1.5" aria-hidden="true">
+      <g data-shape="1">
+        <path d="M200 40C290 36 362 110 356 200C350 296 284 362 196 358C104 354 40 290 46 196C52 106 112 44 200 40Z"/>
+        <path d="M204 96C262 96 306 142 300 200C294 262 250 304 196 300C140 296 100 250 106 196C112 140 150 96 204 96Z"/>
+        <path d="M202 150C232 150 252 172 250 200C248 230 226 250 198 248C170 246 152 226 154 198C156 170 174 150 202 150Z"/>
+        <rect x="190" y="190" width="20" height="20" fill="#cd3131" stroke="none"/>
+      </g>
+      <g data-shape="2">
+        <path d="M30 150L370 196V204L30 250Z" fill="#cd3131" stroke="none"/>
+        <rect x="44" y="290" width="16" height="16"/>
+        <rect x="90" y="290" width="16" height="16" fill="#f7f7f7"/>
+        <rect x="136" y="290" width="16" height="16"/>
+        <rect x="182" y="290" width="16" height="16"/>
+        <rect x="228" y="290" width="16" height="16"/>
+        <rect x="274" y="290" width="16" height="16"/>
+        <rect x="320" y="290" width="16" height="16"/>
+      </g>
+      <g data-shape="3">
+        <path d="M200 30L352 160V236L200 370L48 236V160Z"/>
+        <path d="M200 30L282 214L200 266L118 214Z"/>
+        <path d="M118 214L48 236M282 214L352 236M200 266V370"/>
+        <text x="200" y="198" text-anchor="middle" font-size="64" font-weight="800" fill="#f7f7f7" stroke="none">10</text>
+      </g>
+      <g data-shape="4">
+        <path d="M70 60H220V340H70Z"/>
+        <path d="M180 92H330V340H180Z" fill="#141414"/>
+        <path d="M204 132H306M204 158H306M204 184H270"/>
+        <text x="96" y="124" font-size="44" font-weight="800" fill="#f7f7f7" stroke="none">1</text>
+        <text x="282" y="318" font-size="44" font-weight="800" fill="#f7f7f7" stroke="none">2</text>
+      </g>
+      <g data-shape="5">
+        <path d="M60 80h44v44H60zM122 80h44v44h-44zM184 80h44v44h-44zM246 80h44v44h-44zM308 80h44v44h-44z"/>
+        <path d="M60 150h44v44H60zM122 150h44v44h-44zM184 150h44v44h-44zM246 150h44v44h-44zM308 150h44v44h-44z"/>
+        <path d="M60 220h44v44H60zM122 220h44v44h-44zM184 220h44v44h-44zM246 220h44v44h-44zM308 220h44v44h-44z"/>
+        <path d="M60 290h44v44H60zM122 290h44v44h-44zM184 290h44v44h-44z"/>
+        <rect x="184" y="150" width="44" height="44" fill="#f7f7f7"/>
+      </g>
+    </svg>
+
+    <nav class="nav-scroll" aria-label="전체 메뉴">
+      <ul class="nav-list">
+        <li data-shape="1" style="--i:0"><div class="nav-row"><a class="nav-link" href="index.html"><span class="nav-no">01</span><span class="nav-clip"><span class="nav-word">홈</span></span><span class="nav-dot"></span></a></div></li>
+        <li data-shape="2" style="--i:1"><div class="nav-row"><a class="nav-link" href="guide-1.html" aria-current="true"><span class="nav-no">02</span><span class="nav-clip"><span class="nav-word">가이드</span></span><span class="nav-dot"></span></a><button class="nav-toggle" type="button" aria-expanded="true" aria-controls="sub-guide" aria-label="가이드 하위 메뉴"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M7 0v14M0 7h14"/></svg></button></div><div class="nav-sub" id="sub-guide"><ol class="sub-guides"><li><a class="sub-top" href="guide-1.html"><span class="nav-sno">01</span>세계관</a></li><li><a class="sub-top" href="guide-2.html"><span class="nav-sno">02</span>프리플레이 및 캐릭터 작성</a></li><li><a class="sub-top" href="guide-3.html"><span class="nav-sno">03</span>오프닝 페이즈</a></li><li><a class="sub-top" href="guide-4.html" aria-current="page"><span class="nav-sno">04</span>미들 페이즈 및 판정</a></li><li><a class="sub-top" href="guide-5.html"><span class="nav-sno">05</span>클라이맥스 페이즈 및 전투</a></li><li><a class="sub-top" href="guide-6.html"><span class="nav-sno">06</span>백트랙 및 엔딩</a></li><li><a class="sub-top" href="guide-7.html"><span class="nav-sno">07</span>첫 세션 준비</a></li></ol></div></li>
+        <li data-shape="3" style="--i:2"><div class="nav-row"><a class="nav-link" href="tool-dice.html"><span class="nav-no">03</span><span class="nav-clip"><span class="nav-word">체험 도구</span></span><span class="nav-dot"></span></a><button class="nav-toggle" type="button" aria-expanded="false" aria-controls="sub-tools" aria-label="체험 도구 하위 메뉴"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M7 0v14M0 7h14"/></svg></button></div><div class="nav-sub" id="sub-tools" hidden><ol class="sub-guides"><li><a class="sub-top" href="tool-dice.html"><span class="nav-sno">01</span>판정 다이스 체험</a></li><li><a class="sub-top" href="tool-syndrome.html"><span class="nav-sno">02</span>신드롬 조합 탐색</a></li></ol></div></li>
+        <li data-shape="5" style="--i:3"><div class="nav-row"><a class="nav-link" href="glossary.html"><span class="nav-no">04</span><span class="nav-clip"><span class="nav-word">용어집</span></span><span class="nav-dot"></span></a></div></li>
+      </ul>
+      <div class="nav-foot">
+        <p data-fade style="--f:0">비공식 팬 사이트입니다. <a href="about.html">사이트 안내</a></p>
+        <p class="mono" data-fade style="--f:1">ESC</p>
+      </div>
+    </nav>
+  </div>
+</div>
+
+<div class="title-band">
+  <p class="giant-no" aria-hidden="true">04</p>
+  <div class="guide-title">
+    <h1>미들 페이즈 및 판정</h1>
+    
+  </div>
+  <div class="steps-wrap">
+    <p class="mono" aria-hidden="true">04 / 07</p>
+    <ol class="steps" aria-label="가이드 7단계 중 4단계"><li class="past"></li><li class="past"></li><li class="past"></li><li class="now" aria-current="step"></li><li></li><li></li><li></li></ol>
+  </div>
+</div>
+<main class="read">
+<aside class="stage dg" id="stage" aria-label="본문의 진행을 보여주는 미들 페이즈와 판정 도식">
+  <div class="dg-wrap">
+    <!-- 미들 페이즈의 씬 흐름. 지금 구간의 씬이 붉게 켜진다 -->
+    <svg class="dgs" viewBox="0 0 640 440" aria-hidden="true" data-on="0,2,10,12">
+      <g class="f" data-hot="0"><rect x="150" y="10" width="340" height="50"/><text x="320" y="43" text-anchor="middle">합류 · 시노다의 설명</text></g>
+      <g class="f" data-hot="2"><rect x="150" y="80" width="340" height="50"/><text x="320" y="113" text-anchor="middle">마스터 씬 · 미유의 그림자</text></g>
+      <g class="f"><rect x="150" y="150" width="340" height="50"/><text x="320" y="183" text-anchor="middle">조사 · ‘무언가’의 정체</text></g>
+      <g class="f" data-hot="10"><rect x="150" y="220" width="340" height="50"/><text x="320" y="253" text-anchor="middle">새로운 사건 · 숙주 구출</text></g>
+      <g class="f" data-hot="12"><rect x="150" y="290" width="340" height="50"/><text x="320" y="323" text-anchor="middle">트리거 씬 · 사라진 미유</text></g>
+      <g class="f"><rect x="150" y="360" width="340" height="50"/><text x="320" y="393" text-anchor="middle">클라이맥스로</text></g>
+      <path class="ln" d="M320 60V74M320 130V144M320 200V214M320 270V284M320 340V354M314 68l6 6 6-6M314 138l6 6 6-6M314 208l6 6 6-6M314 278l6 6 6-6M314 348l6 6 6-6"/>
+    </svg>
+    <!-- 로이스 취득: 대상, 두 감정, 겉으로 드러나는 감정 -->
+    <svg class="dgs" viewBox="0 0 640 440" aria-hidden="true" data-on="1">
+      <text class="sm" x="50" y="96">대상</text><text class="sm" x="240" y="96">긍정</text><text class="sm" x="430" y="96">부정</text>
+      <g class="f"><rect x="40" y="108" width="180" height="64"/><text x="58" y="148">시노다</text></g>
+      <g class="f"><rect x="230" y="108" width="180" height="64"/><text x="248" y="148">신뢰</text></g>
+      <g class="f hot"><rect x="420" y="108" width="180" height="64"/><text x="438" y="148">의심</text></g>
+      <text class="sm" x="320" y="206" text-anchor="middle">붉은 칸이 겉으로 드러나는 감정</text>
+      <text class="sm" x="40" y="276">하루카의 로이스 · 다섯 번째 칸</text>
+      <rect class="sq inf" x="40" y="292" width="64" height="64"/><rect class="sq inf" x="120" y="292" width="64" height="64"/><rect class="sq inf" x="200" y="292" width="64" height="64"/><rect class="sq inf" x="280" y="292" width="64" height="64"/>
+      <rect class="sq ov" x="360" y="292" width="64" height="64"/>
+      <rect class="sq" x="440" y="292" width="64" height="64"/><rect class="sq" x="520" y="292" width="64" height="64"/>
+    </svg>
+    <!-- 정보수집의 흐름 -->
+    <svg class="dgs" viewBox="0 0 640 440" aria-hidden="true" data-on="3">
+      <g class="f hot"><rect x="30" y="34" width="270" height="56"/><text x="165" y="70" text-anchor="middle">GM이 제시한 기능</text></g>
+      <g class="f hot"><rect x="30" y="134" width="270" height="56"/><text x="165" y="170" text-anchor="middle">판정</text></g>
+      <g class="f hot"><rect x="30" y="234" width="270" height="56"/><text x="165" y="270" text-anchor="middle">달성치 ≥ 목표치</text></g>
+      <g class="f hot"><rect x="30" y="334" width="270" height="56"/><text x="165" y="370" text-anchor="middle">정보 획득</text></g>
+      <path class="ln" d="M165 90V128M165 190V228M165 290V328M159 120l6 8 6-8M159 220l6 8 6-8M159 320l6 8 6-8"/>
+      <text class="sm" x="352" y="116">실패하면</text>
+      <path class="ln" d="M300 262H330M330 162V362M330 162H352M330 262H352M330 362H352"/>
+      <g class="f"><rect x="352" y="134" width="258" height="56"/><text x="481" y="170" text-anchor="middle">재산 포인트</text></g>
+      <g class="f"><rect x="352" y="234" width="258" height="56"/><text x="481" y="270" text-anchor="middle">아이템</text></g>
+      <g class="f"><rect x="352" y="334" width="258" height="56"/><text x="481" y="370" text-anchor="middle">다시 등장 · 1D10</text></g>
+    </svg>
+    <!-- 하루카의 정보수집: 재산 포인트로 달성치를 높인다 -->
+    <div class="dg-chain" data-on="4">
+      <p class="dg-note">‘무언가’의 정체 · 목표치 9</p>
+      <ol class="chain">
+        <li><b>2</b><b class="hi">7</b><b>4</b><span class="sum">+1</span></li>
+        <li><span class="res">달성치<strong>8</strong></span></li>
+        <li><span class="res">재산 포인트 1을 써서<strong>9</strong></span></li>
+      </ol>
+      <p class="dg-note dg-cost">9는 목표치 9 이상이므로 정보를 얻습니다</p>
+    </div>
+    <div class="dg-chain" data-on="5">
+      <p class="dg-note">가장 높은 눈을 봅니다</p>
+      <ol class="chain"><li><b>3</b><b class="hi">7</b><b>5</b><span class="res">결과<strong>7</strong></span></li></ol>
+    </div>
+    <div class="dg-stack" data-on="6">
+      <div class="dg-chain">
+        <p class="dg-note">크리티컬치 10. 10이 나온 다이스를 다시 굴립니다</p>
+        <ol class="chain"><li><b>3</b><b>7</b><b class="c">10</b><b class="c">10</b><span class="sum">+10</span></li><li><b>?</b><b>?</b></li></ol>
+      </div>
+      <div class="dg-chain">
+        <p class="dg-note">크리티컬치 8. 8 이상이면 다시 굴립니다</p>
+        <ol class="chain">
+          <li><b>3</b><b class="c">9</b><b class="c">8</b><span class="sum">+10</span></li>
+          <li><b>2</b><b class="c">8</b><span class="sum">+10</span></li>
+          <li><b class="hi">4</b><span class="res">다이스 결과<strong>24</strong></span></li>
+        </ol>
+      </div>
+    </div>
+    <div class="dg-chain" data-on="7">
+      <p class="dg-note">크리티컬치 10</p>
+      <ol class="chain">
+        <li><b>3</b><b>7</b><b class="c">10</b><b class="c">10</b><span class="sum">+10</span></li>
+        <li><b>4</b><b class="c">10</b><span class="sum">+10</span></li>
+        <li><b class="hi">5</b><span class="res">다이스 결과<strong>25</strong></span></li>
+      </ol>
+    </div>
+    <div class="dg-chain" data-on="8">
+      <p class="dg-note">다이스 결과 25에 기능 레벨 2를 더합니다</p>
+      <ol class="chain"><li><b>25</b><span class="sum">+2</span></li><li><span class="res">달성치<strong>27</strong></span></li></ol>
+    </div>
+    <div class="dg-chain" data-on="9">
+      <p class="dg-note">모든 다이스가 1입니다</p>
+      <ol class="chain"><li><b>1</b><b>1</b><b>1</b><span class="fum">펌블</span></li><li><span class="res">자동 실패</span></li></ol>
+    </div>
+    <div class="dg-chain" data-on="11">
+      <p class="dg-note">이펙트로 다이스가 늘고 크리티컬치가 8로 내려갔습니다</p>
+      <ol class="chain">
+        <li><b>2</b><b>5</b><b class="c">9</b><b class="c">8</b><b>3</b><b>6</b><span class="sum">+10</span></li>
+        <li><b>4</b><b class="c">8</b><span class="sum">+10</span></li>
+        <li><b class="hi">7</b><span class="res">다이스 결과<strong>27</strong></span></li>
+      </ol>
+      <p class="dg-note dg-cost">대신 이펙트의 침식치만큼 침식률이 오릅니다</p>
+    </div>
+  </div>
+  <p class="caption" id="caption" aria-live="polite"></p>
+  <ol class="legs" id="legs" aria-label="이 페이지의 구간"></ol>
+</aside>
+
+<article class="text">
+  <section id="s1" data-step="0" data-cap="미들. 씬에 등장할 때마다 1D10씩 오릅니다.">
+    <h2>미들 페이즈</h2>
+    <p>씬에 등장하고, 정보를 모으고, 인연을 맺습니다. 씬에 등장할 때마다 침식률이 1D10 오릅니다. 궁금한 것이 많을수록 움직이고 싶어지고, 움직일수록 침식률이 오릅니다.</p>
+    <p>미들 페이즈는 정보수집만으로 이루어지지 않습니다. 다른 PC와의 합류, 사건의 조사, 새로운 사건이나 전투 같은 여러 씬이 이어지며 클라이맥스로 향합니다. 이 장에서는 하루카의 미들 페이즈를 따라가며 이 씬들을 하나씩 겪어 봅니다.</p>
+    <div class="story">
+      <p class="story-h">하루카의 미들 페이즈 · 합류</p>
+      <p>다음 날, UGN의 연락을 받은 하루카는 시립병원 지하의 UGN 시설로 향합니다. 그곳에는 같은 사건을 쫓는 다른 PC들, UGN의 에이전트와 칠드런이 먼저 와 있었습니다.</p>
+      <p>지부장 시노다 쿄코는 하루카가 레니게이드에 감염되어 오버드로 각성했다는 사실과, 이제 일상과 비일상의 경계에 서게 되었다는 것을 담담히 설명합니다. 그리고 역에 나타난 ‘무언가’를 UGN이 쫓고 있으며, 그것을 함께 본 미유도 지켜볼 필요가 있다고 덧붙입니다.</p>
+      <p>‘무언가’가 무엇인지 묻는 하루카에게 시노다는 UGN도 아직 정체를 파악하지 못했다고 답하고, 함께 조사해 달라고 부탁합니다.</p>
+    </div>
+  </section>
+
+  <section id="s2" data-step="1" data-cap="로이스는 대상과 두 감정, 겉으로 드러나는 감정으로 이루어집니다.">
+    <h2>로이스 취득</h2>
+    <p>시트를 작성할 때 채우지 않은 로이스 칸은 세션 중에 선언해서 채울 수 있습니다. 씬에서 만난 NPC는 물론, 다른 PC와도 로이스를 맺을 수 있습니다.</p>
+    <p>로이스를 취득할 때는 대상과, 그 대상에 대한 긍정적 감정과 부정적 감정을 하나씩 정합니다. 그리고 둘 중 하나를 겉으로 드러나는 감정(표면 감정)으로 고릅니다. 감정은 그 인물을 향한 캐릭터의 마음을 짧은 낱말로 적은 것으로, 긍정과 부정이 엇갈릴수록 관계가 입체적으로 드러납니다.</p>
+    <p>취득할 때 기입한 감정은 세션 중에 바꿀 수 없지만, 겉으로 드러나는 감정은 긍정과 부정 사이에서 뒤집을 수 있습니다.</p>
+    <div class="story">
+      <p class="story-h">하루카의 미들 페이즈 · 로이스 취득</p>
+      <p>하루카는 시노다에게 로이스를 맺겠다고 선언합니다. 대상은 시노다 쿄코. 긍정적 감정은 자신을 지켜 주려는 어른에게 느끼는 ‘신뢰’, 부정적 감정은 아직 모르는 것투성이인 UGN을 온전히 믿어도 될지에 대한 ‘의심’입니다.</p>
+      <p>지금의 하루카에게 더 크게 드러나는 쪽은 의심이기에, 겉으로 드러나는 감정은 의심으로 정합니다. 이것이 하루카의 다섯 번째 로이스입니다.</p>
+    </div>
+  </section>
+
+  <section id="s3" data-step="2" data-cap="PC가 등장하지 않는 씬도 있습니다.">
+    <h2>마스터 씬</h2>
+    <p>마스터 씬은 PC가 등장하지 않고 GM이 연출하는 씬입니다. 플레이어는 캐릭터가 아직 모르는 일을 먼저 보게 됩니다.</p>
+    <div class="story">
+      <p class="story-h">하루카의 미들 페이즈 · 마스터 씬</p>
+      <p>그날 밤, 하루카가 늦게까지 돌아오지 않는 집. 혼자 숙제를 하던 미유가 스탠드를 끄자, 벽에 비친 그림자가 잠깐 미유와 다르게 고개를 듭니다. 미유는 그것을 알아차리지 못합니다.</p>
+    </div>
+  </section>
+
+  <section id="s4" data-step="3" data-cap="달성치가 목표치 이상이면 정보를 얻습니다.">
+    <h2>정보수집</h2>
+    <p>미들 페이즈에서는 GM이 제시한 기능으로 판정해 정보를 얻습니다. 정보수집 씬마다 PC 1명이 1번씩 판정합니다.</p>
+    <p>달성치가 GM이 정한 목표치 이상이면 정보를 얻습니다.</p>
+    <div class="story">
+      <p class="story-h">하루카의 미들 페이즈 · 사건의 조사</p>
+      <p>의문을 풀기 위해 PC들은 각자 조사에 나섭니다. GM은 ‘무언가’의 정체와 ‘미유에게 일어나는 일’, 두 가지 정보를 제시합니다.</p>
+      <p>다른 PC는 UGN의 감시 기록을 뒤져 미유 쪽을 조사하고, 미유의 그림자가 날마다 조금씩 짙어지고 있다는 사실을 알아냅니다. 하루카는 역에 남은 흔적을 따라 신사에서 ‘무언가’의 정체를 조사합니다. 이 정보는 〈정보〉로 목표치 9 이상이 필요합니다.</p>
+    </div>
+  </section>
+
+  <section id="s5" data-step="4" data-cap="재산 포인트 1로 달성치 8을 9로 높였습니다.">
+    <h2>정보수집에 실패했을 때</h2>
+    <p>실패하면 재산 포인트로 달성치를 높이거나, 씬을 다시 열어 침식률 상승을 처리한 뒤 다시 굴립니다. 재산 포인트는 1점을 쓸 때마다 달성치를 1 높입니다.</p>
+    <p>정보수집 판정의 다이스를 늘리거나 다시 굴릴 수 있게 해 주는 아이템도 있습니다. 어떤 아이템이 있는지는 룰북에서 확인해 주십시오.</p>
+    <div class="story">
+      <p class="story-h">하루카의 미들 페이즈 · 재산 포인트를 쓰다</p>
+      <p>하루카는 다이스 3개를 굴려 2, 7, 4가 나왔습니다. 가장 높은 눈 7에 〈정보〉 기능 레벨 1을 더해 달성치는 8. 목표치 9에 1이 모자랍니다. 하루카는 재산 포인트 1을 써서 달성치를 9로 높이고, 정보를 얻습니다.</p>
+      <p>‘무언가’는 사람의 그림자에 기생해, 숙주를 서서히 졈으로 바꾸는 졈이었습니다. 숙주가 완전히 삼켜지기 전에 그림자에서 떼어 내면, 숙주는 사람으로 돌아올 수 있습니다. 그리고 승강장에서 그것과 눈이 마주친 미유는, 이미 그것의 숙주가 되어 있었습니다.</p>
+    </div>
+    <p>이 판정은 아래와 같이 처리합니다.</p>
+  </section>
+
+  <section id="s6" data-step="5" data-cap="3, 7, 5가 나오면 결과는 7입니다.">
+    <h2>판정</h2>
+    <p>판정은 10면체 다이스 여러 개를 한꺼번에 굴립니다. 합계가 아니라 가장 높은 눈을 봅니다.</p>
+    <p>정보수집뿐 아니라 클라이맥스 전투의 공격과 회피도 같은 방법으로 판정합니다.</p>
+  </section>
+
+  <section id="s7" data-step="6" data-cap="크리티컬치가 낮으면 연쇄가 쉽게 일어납니다.">
+    <h2>크리티컬과 크리티컬치</h2>
+    <p>이 게임의 다이스는 터집니다. 크리티컬치 이상의 눈이 나오면 그 다이스를 다시 굴리고, 결과에 10을 더합니다.</p>
+    <p>크리티컬치의 기본은 10입니다. 이펙트로 낮출 수 있으며, 어디까지 낮출 수 있는지는 이펙트에 적혀 있습니다. 값이 낮을수록 연쇄가 쉽게 일어나 달성치가 치솟습니다.</p>
+  </section>
+
+  <section id="s8" data-step="7" data-cap="10을 두 번 더하고 마지막 5를 더합니다.">
+    <h2>풀이 예시</h2>
+    <p>다이스 4개를 굴려 3, 7, 10, 10이 나왔습니다. 10이 나온 두 개를 다시 굴려 4와 10이 나왔고, 10이 나온 한 개를 또 굴려 5가 나왔습니다.</p>
+    <p>재굴림이 일어난 회차마다 10을 더하고, 마지막 회차의 가장 높은 눈을 더합니다. 10 + 10 + 5 = 25입니다.</p>
+  </section>
+
+  <section id="s9" data-step="8" data-cap="기능 레벨은 고정치로 더합니다.">
+    <h2>기능 레벨과 달성치</h2>
+    <p>다이스 결과에 기능 레벨을 고정치로 더하면 최종 결과인 달성치가 됩니다.</p>
+  </section>
+
+  <section id="s10" data-step="9" data-cap="펌블이면 자동 실패입니다.">
+    <h2>펌블</h2>
+    <p>굴린 다이스가 모두 1이면 펌블이며, 자동 실패입니다.</p>
+  </section>
+
+  <section id="s11" data-step="10" data-cap="미들 페이즈에도 새로운 사건과 전투가 끼어듭니다.">
+    <h2>새로운 사건과 전투</h2>
+    <p>미들 페이즈에는 조사 말고도 새로운 사건이 일어나거나 전투가 벌어지기도 합니다. 미들 페이즈의 전투도 클라이맥스의 전투와 같은 방식으로 진행하며, 전투의 흐름은 가이드 5에서 설명합니다.</p>
+    <div class="story">
+      <p class="story-h">하루카의 미들 페이즈 · 새로운 사건</p>
+      <p>정체를 알아낸 PC들이 신사를 나서는 순간, 그림자가 부풀어 오른 회사원이 덮쳐 옵니다. 미유보다 먼저 ‘무언가’의 숙주가 된 사람이었습니다.</p>
+      <p>PC들은 회사원을 해치지 않고, 그림자에 들러붙은 ‘무언가’의 조각만을 노려 싸우기로 합니다.</p>
+    </div>
+  </section>
+
+  <section id="s12" data-step="11" data-cap="쉽게 성공하는 대신 100%에 가까워집니다.">
+    <h2>이펙트를 쓰면</h2>
+    <p>판정에 이펙트를 쓰면 다이스/달성치가 늘어나거나 크리티컬치를 줄일 수 있지만, 이펙트의 침식치만큼 침식률이 오릅니다.</p>
+    <div class="story">
+      <p class="story-h">하루카의 미들 페이즈 · 첫 전투</p>
+      <p>하루카는 처음으로 팔을 짐승의 것으로 바꾸는 이펙트를 써서, 회사원의 그림자를 내리찍습니다. 떨어져 나간 그림자가 흩어지고, 회사원은 사람의 얼굴로 돌아와 쓰러집니다.</p>
+      <p>숙주를 되찾을 수 있다는 것을 하루카는 눈으로 확인합니다. 그러나 그만큼 침식률이 오른 것도 몸으로 느낍니다.</p>
+    </div>
+    <p>다이스 수와 크리티컬치를 바꿔 가며 다이스가 어떻게 터지는지 직접 확인해 보십시오.</p>
+    <a class="btn solid" href="tool-dice.html">판정 다이스 체험</a>
+  </section>
+
+  <section id="s13" data-step="12" data-cap="조건이 채워지면 트리거 씬이 열리고, 클라이맥스로 이어집니다.">
+    <h2>트리거 씬</h2>
+    <p>트리거 씬은 특정 정보를 얻는 등 조건을 채우면 열리는 씬입니다. 미들 페이즈의 씬들은 이렇게 모여 클라이맥스로 이어집니다.</p>
+    <div class="story">
+      <p class="story-h">하루카의 미들 페이즈 · 트리거 씬</p>
+      <p>‘무언가’의 정체와 미유의 상태, 두 정보가 모두 밝혀지자 트리거 씬이 열립니다. 미유가 집에 돌아오지 않았다는 어머니의 전화가 걸려 옵니다.</p>
+      <p>시노다는 UGN의 지원 인력을 창고 거리로 보내면서도, 이번 일은 PC들이 미유를 되찾는 데 달려 있다고 말합니다. 미유를 반드시 함께 데려오겠다며 앞장서는 시노다에게, 하루카는 겉으로 드러나는 감정을 의심에서 신뢰로 뒤집습니다.</p>
+      <p>하루카는 창고 거리로 달려갑니다.</p>
+    </div>
+  </section>
+<nav class="pager" aria-label="이전과 다음 가이드"><a href="guide-3.html">이전: 오프닝 페이즈</a><a href="guide-5.html">다음: 클라이맥스 페이즈 및 전투</a></nav></article>
+
+</main>
+<footer class="site-foot"><p>비공식 팬 사이트입니다. 야노 슌사쿠와 유한회사 F.E.A.R.이 권리를 가진 『더블크로스 The 3rd Edition』의 2차 창작물입니다.</p><p><a href="about.html">사이트 안내</a> <a href="glossary.html">용어집</a></p></footer>
+
+<script src="assets/menu.js"></script>
+<script src="assets/site.js"></script>
+<script>GuideStage();</script>
+</body>
+</html>

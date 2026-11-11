@@ -1,0 +1,624 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>프리플레이 및 캐릭터 작성 | 더블크로스 입문 브리핑</title>
+<meta name="description" content="핸드아웃을 받는 프리플레이와, 캐릭터 시트를 순서대로 채우는 방법을 설명합니다.">
+<meta name="theme-color" content="#f7f7f7">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='16' height='16' fill='%23cd3131'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/wanteddev/wanted-sans@v1.0.3/packages/wanted-sans/fonts/webfonts/variable/split/WantedSansVariable.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;700&family=Noto+Sans+JP:wght@500;700&display=swap">
+<link rel="stylesheet" href="assets/style.css">
+<link rel="stylesheet" href="assets/pages.css">
+</head>
+<body data-guide="2">
+<header class="top">
+  <a class="brand" href="index.html"><i aria-hidden="true"></i>DX3 입문 브리핑</a>
+  <p class="rights">비공식 팬 사이트입니다. 야노 슌사쿠와 유한회사 F.E.A.R.이 권리를 가진 『더블크로스 The 3rd Edition』의 2차 창작물입니다.</p>
+</header>
+
+<button class="menu-btn" id="menu-btn" type="button" aria-expanded="false" aria-controls="nav" aria-label="메뉴 열기">
+  <span class="menu-roll" aria-hidden="true"><span>메뉴</span><span>닫기</span></span>
+  <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M7 0v14M0 7h14"/></svg>
+</button>
+
+<div class="nav" id="nav" inert>
+  <div class="nav-scrim"></div>
+  <div class="nav-panel">
+    <div class="nav-bg" aria-hidden="true"><i></i><i></i><i></i></div>
+    <svg class="nav-shapes" viewBox="0 0 400 400" fill="none" stroke="#f7f7f7" stroke-width="1.5" aria-hidden="true">
+      <g data-shape="1">
+        <path d="M200 40C290 36 362 110 356 200C350 296 284 362 196 358C104 354 40 290 46 196C52 106 112 44 200 40Z"/>
+        <path d="M204 96C262 96 306 142 300 200C294 262 250 304 196 300C140 296 100 250 106 196C112 140 150 96 204 96Z"/>
+        <path d="M202 150C232 150 252 172 250 200C248 230 226 250 198 248C170 246 152 226 154 198C156 170 174 150 202 150Z"/>
+        <rect x="190" y="190" width="20" height="20" fill="#cd3131" stroke="none"/>
+      </g>
+      <g data-shape="2">
+        <path d="M30 150L370 196V204L30 250Z" fill="#cd3131" stroke="none"/>
+        <rect x="44" y="290" width="16" height="16"/>
+        <rect x="90" y="290" width="16" height="16" fill="#f7f7f7"/>
+        <rect x="136" y="290" width="16" height="16"/>
+        <rect x="182" y="290" width="16" height="16"/>
+        <rect x="228" y="290" width="16" height="16"/>
+        <rect x="274" y="290" width="16" height="16"/>
+        <rect x="320" y="290" width="16" height="16"/>
+      </g>
+      <g data-shape="3">
+        <path d="M200 30L352 160V236L200 370L48 236V160Z"/>
+        <path d="M200 30L282 214L200 266L118 214Z"/>
+        <path d="M118 214L48 236M282 214L352 236M200 266V370"/>
+        <text x="200" y="198" text-anchor="middle" font-size="64" font-weight="800" fill="#f7f7f7" stroke="none">10</text>
+      </g>
+      <g data-shape="4">
+        <path d="M70 60H220V340H70Z"/>
+        <path d="M180 92H330V340H180Z" fill="#141414"/>
+        <path d="M204 132H306M204 158H306M204 184H270"/>
+        <text x="96" y="124" font-size="44" font-weight="800" fill="#f7f7f7" stroke="none">1</text>
+        <text x="282" y="318" font-size="44" font-weight="800" fill="#f7f7f7" stroke="none">2</text>
+      </g>
+      <g data-shape="5">
+        <path d="M60 80h44v44H60zM122 80h44v44h-44zM184 80h44v44h-44zM246 80h44v44h-44zM308 80h44v44h-44z"/>
+        <path d="M60 150h44v44H60zM122 150h44v44h-44zM184 150h44v44h-44zM246 150h44v44h-44zM308 150h44v44h-44z"/>
+        <path d="M60 220h44v44H60zM122 220h44v44h-44zM184 220h44v44h-44zM246 220h44v44h-44zM308 220h44v44h-44z"/>
+        <path d="M60 290h44v44H60zM122 290h44v44h-44zM184 290h44v44h-44z"/>
+        <rect x="184" y="150" width="44" height="44" fill="#f7f7f7"/>
+      </g>
+    </svg>
+
+    <nav class="nav-scroll" aria-label="전체 메뉴">
+      <ul class="nav-list">
+        <li data-shape="1" style="--i:0"><div class="nav-row"><a class="nav-link" href="index.html"><span class="nav-no">01</span><span class="nav-clip"><span class="nav-word">홈</span></span><span class="nav-dot"></span></a></div></li>
+        <li data-shape="2" style="--i:1"><div class="nav-row"><a class="nav-link" href="guide-1.html" aria-current="true"><span class="nav-no">02</span><span class="nav-clip"><span class="nav-word">가이드</span></span><span class="nav-dot"></span></a><button class="nav-toggle" type="button" aria-expanded="true" aria-controls="sub-guide" aria-label="가이드 하위 메뉴"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M7 0v14M0 7h14"/></svg></button></div><div class="nav-sub" id="sub-guide"><ol class="sub-guides"><li><a class="sub-top" href="guide-1.html"><span class="nav-sno">01</span>세계관</a></li><li><a class="sub-top" href="guide-2.html" aria-current="page"><span class="nav-sno">02</span>프리플레이 및 캐릭터 작성</a></li><li><a class="sub-top" href="guide-3.html"><span class="nav-sno">03</span>오프닝 페이즈</a></li><li><a class="sub-top" href="guide-4.html"><span class="nav-sno">04</span>미들 페이즈 및 판정</a></li><li><a class="sub-top" href="guide-5.html"><span class="nav-sno">05</span>클라이맥스 페이즈 및 전투</a></li><li><a class="sub-top" href="guide-6.html"><span class="nav-sno">06</span>백트랙 및 엔딩</a></li><li><a class="sub-top" href="guide-7.html"><span class="nav-sno">07</span>첫 세션 준비</a></li></ol></div></li>
+        <li data-shape="3" style="--i:2"><div class="nav-row"><a class="nav-link" href="tool-dice.html"><span class="nav-no">03</span><span class="nav-clip"><span class="nav-word">체험 도구</span></span><span class="nav-dot"></span></a><button class="nav-toggle" type="button" aria-expanded="false" aria-controls="sub-tools" aria-label="체험 도구 하위 메뉴"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M7 0v14M0 7h14"/></svg></button></div><div class="nav-sub" id="sub-tools" hidden><ol class="sub-guides"><li><a class="sub-top" href="tool-dice.html"><span class="nav-sno">01</span>판정 다이스 체험</a></li><li><a class="sub-top" href="tool-syndrome.html"><span class="nav-sno">02</span>신드롬 조합 탐색</a></li></ol></div></li>
+        <li data-shape="5" style="--i:3"><div class="nav-row"><a class="nav-link" href="glossary.html"><span class="nav-no">04</span><span class="nav-clip"><span class="nav-word">용어집</span></span><span class="nav-dot"></span></a></div></li>
+      </ul>
+      <div class="nav-foot">
+        <p data-fade style="--f:0">비공식 팬 사이트입니다. <a href="about.html">사이트 안내</a></p>
+        <p class="mono" data-fade style="--f:1">ESC</p>
+      </div>
+    </nav>
+  </div>
+</div>
+
+<div class="title-band">
+  <p class="giant-no" aria-hidden="true">02</p>
+  <div class="guide-title">
+    <h1>프리플레이 및 캐릭터 작성</h1>
+    <p class="sub">시트의 칸이 각각 무엇인지 알면, 룰북이 훨씬 쉽게 읽힙니다.</p>
+  </div>
+  <div class="steps-wrap">
+    <p class="mono" aria-hidden="true">02 / 07</p>
+    <ol class="steps" aria-label="가이드 7단계 중 2단계"><li class="past"></li><li class="now" aria-current="step"></li><li></li><li></li><li></li><li></li><li></li></ol>
+  </div>
+</div>
+<main class="read">
+<aside class="stage dg" id="stage" aria-label="본문의 각 설정을 설명하는 도식">
+  <div class="dg-wrap">
+    <svg class="dgs" viewBox="0 0 640 440" aria-hidden="true">
+      <!-- 세션의 흐름: 지금은 프리플레이 -->
+      <g data-on="0">
+        <text class="sm" x="115" y="102" text-anchor="middle">지금 여기</text>
+        <g class="f hot"><rect x="20" y="116" width="190" height="64"/><text x="115" y="156" text-anchor="middle">프리플레이</text></g>
+        <g class="f"><rect x="225" y="116" width="190" height="64"/><text x="320" y="156" text-anchor="middle">오프닝</text></g>
+        <g class="f"><rect x="430" y="116" width="190" height="64"/><text x="525" y="156" text-anchor="middle">미들</text></g>
+        <g class="f"><rect x="20" y="266" width="190" height="64"/><text x="115" y="306" text-anchor="middle">클라이맥스</text></g>
+        <g class="f"><rect x="225" y="266" width="190" height="64"/><text x="320" y="306" text-anchor="middle">백트랙</text></g>
+        <g class="f"><rect x="430" y="266" width="190" height="64"/><text x="525" y="306" text-anchor="middle">엔딩</text></g>
+        <path class="ln" d="M210 148H225M415 148H430M525 180V222H115V266M210 298H225M415 298H430M109 258l6 8 6-8"/>
+      </g>
+      <!-- 핸드아웃: PC마다 한 장씩 -->
+      <g data-on="1">
+        <g class="f"><rect x="150" y="50" width="340" height="60"/><text x="170" y="88">핸드아웃 · PC1</text></g>
+        <g class="f"><rect x="150" y="110" width="340" height="70"/><text x="170" y="153">도입 이야기</text></g>
+        <g class="f hot"><rect x="150" y="180" width="340" height="70"/><text x="170" y="223">시나리오 로이스</text></g>
+        <path class="dash" d="M490 215H560V320"/>
+        <g class="f"><rect x="440" y="320" width="180" height="60"/><text x="530" y="358" text-anchor="middle">로이스 칸</text></g>
+        <text class="sm" x="150" y="300">PC마다 한 장씩 받습니다</text>
+      </g>
+      <!-- 캐릭터 작성 방법: 빠르게 시작할수록 왼쪽, 자유롭게 설계할수록 오른쪽 -->
+      <g data-on="2">
+        <text class="sm" x="525" y="112" text-anchor="middle">많이 쓰는 방법</text>
+        <g class="f"><rect x="20" y="130" width="190" height="80"/><text x="115" y="178" text-anchor="middle">퀵스타트</text></g>
+        <g class="f"><rect x="225" y="130" width="190" height="80"/><text x="320" y="178" text-anchor="middle">컨스트럭션</text></g>
+        <g class="f hot"><rect x="430" y="130" width="190" height="80"/><text x="525" y="178" text-anchor="middle">풀스크래치</text></g>
+        <path class="ln" d="M20 270H618M608 264l10 6-10 6"/>
+        <text class="sm" x="20" y="306">빠르게 시작</text>
+        <text class="sm" x="620" y="306" text-anchor="end">자유롭게 설계</text>
+      </g>
+      <!-- 이름과 코드네임: 일상의 이름과 비일상의 이름 -->
+      <g data-on="3">
+        <text class="sm" x="160" y="122" text-anchor="middle">일상에서</text>
+        <text class="sm" x="480" y="122" text-anchor="middle">비일상에서</text>
+        <g class="f"><rect x="30" y="140" width="260" height="110"/><text class="big" x="160" y="206" text-anchor="middle">나루세 하루카</text></g>
+        <g class="f hot"><rect x="350" y="140" width="260" height="110"/><text class="big" x="480" y="206" text-anchor="middle">그레이 팽</text></g>
+        <path class="ln" d="M296 195H342M334 189l8 6-8 6"/>
+        <text class="sm" x="160" y="290" text-anchor="middle">본명</text>
+        <text class="sm" x="480" y="290" text-anchor="middle">오버드로서의 이명</text>
+      </g>
+      <!-- 웍스와 커버: 뒤에 숨은 입장과 앞에 보이는 얼굴 -->
+      <g data-on="4">
+        <g class="f hot"><rect x="170" y="60" width="420" height="190"/><text x="194" y="102">웍스</text><text class="sm" x="194" y="134">사건 속의 입장</text></g>
+        <g class="f"><rect x="50" y="180" width="420" height="190"/><text x="74" y="222">커버</text><text class="sm" x="74" y="254">세간에 보이는 얼굴</text></g>
+      </g>
+      <!-- 신드롬과 브리드: 신드롬 수에 따라 브리드가 정해진다 -->
+      <g data-on="5">
+        <rect class="sq ov" x="60" y="80" width="56" height="56"/>
+        <rect class="sq ov" x="60" y="180" width="56" height="56"/><rect class="sq ov" x="126" y="180" width="56" height="56"/>
+        <rect class="sq ov" x="60" y="280" width="56" height="56"/><rect class="sq ov" x="126" y="280" width="56" height="56"/><rect class="sq ov" x="192" y="280" width="56" height="56"/>
+        <text x="300" y="104">퓨어브리드</text><text class="sm" x="300" y="130">신드롬 1개</text>
+        <text x="300" y="204">크로스브리드</text><text class="sm" x="300" y="230">신드롬 2개</text>
+        <text x="300" y="304">트라이브리드</text><text class="sm" x="300" y="330">신드롬 3개</text>
+      </g>
+      <!-- 능력치와 기능치: 능력치마다 딸린 기능, 그리고 판정에서의 역할 -->
+      <g data-on="8">
+        <g class="f"><rect x="20" y="30" width="135" height="56"/><text x="87" y="66" text-anchor="middle">육체</text></g>
+        <path class="ln" d="M87 86V106"/>
+        <rect class="chip" x="32" y="106" width="110" height="44"/><text class="chip-t" x="87" y="135" text-anchor="middle">〈백병〉</text>
+        <rect class="chip" x="32" y="158" width="110" height="44"/><text class="chip-t" x="87" y="187" text-anchor="middle">〈회피〉</text>
+        <g class="f"><rect x="175" y="30" width="135" height="56"/><text x="242" y="66" text-anchor="middle">감각</text></g>
+        <path class="ln" d="M242 86V106"/>
+        <rect class="chip" x="187" y="106" width="110" height="44"/><text class="chip-t" x="242" y="135" text-anchor="middle">〈사격〉</text>
+        <rect class="chip" x="187" y="158" width="110" height="44"/><text class="chip-t" x="242" y="187" text-anchor="middle">〈지각〉</text>
+        <g class="f"><rect x="330" y="30" width="135" height="56"/><text x="397" y="66" text-anchor="middle">정신</text></g>
+        <path class="ln" d="M397 86V106"/>
+        <rect class="chip" x="342" y="106" width="110" height="44"/><text class="chip-t" x="397" y="135" text-anchor="middle">〈RC〉</text>
+        <rect class="chip" x="342" y="158" width="110" height="44"/><text class="chip-t" x="397" y="187" text-anchor="middle">〈의지〉</text>
+        <g class="f"><rect x="485" y="30" width="135" height="56"/><text x="552" y="66" text-anchor="middle">사회</text></g>
+        <path class="ln" d="M552 86V106"/>
+        <rect class="chip" x="497" y="106" width="110" height="44"/><text class="chip-t" x="552" y="135" text-anchor="middle">〈교섭〉</text>
+        <rect class="chip" x="497" y="158" width="110" height="44"/><text class="chip-t" x="552" y="187" text-anchor="middle">〈정보〉</text>
+        <text class="sm" x="320" y="232" text-anchor="middle">신드롬 배분 + 웍스 배분 + 경험점 배분</text>
+        <g class="f"><rect x="20" y="250" width="600" height="60"/><text x="44" y="288">능력치 → 굴리는 다이스 수</text></g>
+        <g class="f hot"><rect x="20" y="326" width="600" height="60"/><text x="44" y="364">기능치 → 달성치에 더하는 값</text></g>
+      </g>
+      <!-- 라이프패스: 출생에서 지금까지, 해후의 인물은 로이스로 -->
+      <g data-on="6">
+        <path class="ln" d="M60 180H580"/>
+        <rect class="sq inf" x="88" y="168" width="24" height="24"/><rect class="sq inf" x="248" y="168" width="24" height="24"/><rect class="sq inf" x="408" y="168" width="24" height="24"/><rect class="sq ov" x="548" y="168" width="24" height="24"/>
+        <text x="100" y="146" text-anchor="middle">출생</text><text x="260" y="146" text-anchor="middle">경험</text><text x="420" y="146" text-anchor="middle">해후</text><text x="560" y="146" text-anchor="middle">지금</text>
+        <path class="dash" d="M420 192V290"/>
+        <g class="f"><rect x="340" y="290" width="160" height="60"/><text x="420" y="328" text-anchor="middle">로이스</text></g>
+      </g>
+      <!-- 각성과 충동: 둘이 시작 침식률을 정한다 -->
+      <g data-on="7">
+        <g class="f"><rect x="40" y="90" width="220" height="70"/><text x="150" y="133" text-anchor="middle">각성</text></g>
+        <g class="f"><rect x="40" y="250" width="220" height="70"/><text x="150" y="293" text-anchor="middle">충동</text></g>
+        <path class="ln" d="M260 125H320V205H372M260 285H320V205M364 199l8 6-8 6"/>
+        <g class="f hot"><rect x="380" y="170" width="230" height="70"/><text x="495" y="213" text-anchor="middle">시작 침식률</text></g>
+      </g>
+      <!-- 재산 포인트와 상비화 포인트 -->
+      <g data-on="9">
+        <g class="f"><rect x="20" y="180" width="210" height="70"/><text x="125" y="223" text-anchor="middle">상비화 포인트</text></g>
+        <path class="ln" d="M230 215H262V110H294M262 215V330H294M286 104l8 6-8 6M286 324l8 6-8 6"/>
+        <g class="f"><rect x="300" y="80" width="310" height="60"/><text x="455" y="118" text-anchor="middle">늘 지니는 아이템</text></g>
+        <text class="sm" x="300" y="290">남은 포인트</text>
+        <g class="f hot"><rect x="300" y="300" width="310" height="60"/><text x="455" y="338" text-anchor="middle">재산 포인트</text></g>
+        <text class="sm" x="455" y="392" text-anchor="middle">아이템 구입 · 정보수집</text>
+      </g>
+      <!-- 행동치, 전투이동, 전력이동 -->
+      <g data-on="10">
+        <text class="sm" x="20" y="56">행동치가 높을수록 먼저</text>
+        <g class="f hot"><rect x="20" y="74" width="170" height="60"/><text x="105" y="112" text-anchor="middle">1번째</text></g>
+        <g class="f"><rect x="235" y="74" width="170" height="60"/><text x="320" y="112" text-anchor="middle">2번째</text></g>
+        <g class="f"><rect x="450" y="74" width="170" height="60"/><text x="535" y="112" text-anchor="middle">3번째</text></g>
+        <path class="ln" d="M190 104H235M405 104H450"/>
+        <rect class="sq inf" x="30" y="250" width="26" height="26"/><rect class="sq inf" x="30" y="350" width="26" height="26"/>
+        <text class="sm" x="70" y="232">전투이동 · 마이너 액션</text>
+        <path class="ln" d="M56 263H260M252 257l8 6-8 6"/>
+        <text class="sm" x="70" y="332">전력이동 · 메이저 액션</text>
+        <path class="ln" d="M56 363H610M602 357l8 6-8 6"/>
+      </g>
+      <!-- 로이스: 감정, 그리고 시작할 때의 칸 구성(고정 3, 시나리오 1) -->
+      <g data-on="11">
+        <text class="sm" x="50" y="60">대상</text><text class="sm" x="240" y="60">긍정</text><text class="sm" x="430" y="60">부정</text>
+        <g class="f"><rect x="40" y="72" width="180" height="60"/><text x="58" y="110">미유</text></g>
+        <g class="f hot"><rect x="230" y="72" width="180" height="60"/><text x="248" y="110">애정</text></g>
+        <g class="f"><rect x="420" y="72" width="180" height="60"/><text x="438" y="110">불안</text></g>
+        <text class="sm" x="320" y="162" text-anchor="middle">붉은 칸이 겉으로 드러나는 감정</text>
+        <text class="sm" x="40" y="236">시작할 때의 로이스 · 최대 7개</text>
+        <rect class="sq inf" x="40" y="252" width="64" height="64"/><rect class="sq inf" x="120" y="252" width="64" height="64"/><rect class="sq inf" x="200" y="252" width="64" height="64"/>
+        <rect class="sq ov" x="280" y="252" width="64" height="64"/>
+        <rect class="sq" x="360" y="252" width="64" height="64"/><rect class="sq" x="440" y="252" width="64" height="64"/><rect class="sq" x="520" y="252" width="64" height="64"/>
+        <path class="ln" d="M40 332V340H264V332M280 332V340H344V332M360 332V340H584V332"/>
+        <text class="sm" x="152" y="366" text-anchor="middle">고정 3</text>
+        <text class="sm" x="312" y="366" text-anchor="middle">시나리오</text>
+        <text class="sm" x="472" y="366" text-anchor="middle">세션 중</text>
+      </g>
+      <!-- D로이스: 고정 로이스 3칸 가운데 하나를 쓰는 선택 룰 -->
+      <g data-on="12">
+        <text class="sm" x="40" y="142">고정 로이스 3칸 가운데 하나</text>
+        <rect class="sq ov" x="40" y="160" width="64" height="64"/><text class="chip-t" x="72" y="200" text-anchor="middle">D</text>
+        <rect class="sq inf" x="120" y="160" width="64" height="64"/><rect class="sq inf" x="200" y="160" width="64" height="64"/>
+        <rect class="sq" x="280" y="160" width="64" height="64"/><rect class="sq" x="360" y="160" width="64" height="64"/><rect class="sq" x="440" y="160" width="64" height="64"/><rect class="sq" x="520" y="160" width="64" height="64"/>
+        <path class="ln" d="M40 240V248H264V240"/>
+        <text class="sm" x="152" y="274" text-anchor="middle">고정 로이스 3칸</text>
+        <path class="dash" d="M72 296V330"/>
+        <text class="sm" x="40" y="356">상급 룰북의 선택 룰</text>
+      </g>
+      <!-- 이펙트: 이펙트에 적혀 있는 항목 -->
+      <g data-on="13">
+        <g class="f hot" data-ef="name"><rect x="140" y="20" width="360" height="56"/><text x="160" y="56">이펙트</text></g>
+        <g class="f" data-ef="timing"><rect x="140" y="76" width="360" height="56"/><text x="160" y="112">타이밍</text></g>
+        <g class="f" data-ef="skill"><rect x="140" y="132" width="360" height="56"/><text x="160" y="168">기능</text></g>
+        <g class="f" data-ef="diff"><rect x="140" y="188" width="360" height="56"/><text x="160" y="224">난이도</text></g>
+        <g class="f" data-ef="target"><rect x="140" y="244" width="360" height="56"/><text x="160" y="280">대상</text></g>
+        <g class="f" data-ef="cost"><rect x="140" y="300" width="360" height="56"/><text x="160" y="336">침식치</text></g>
+        <g class="f" data-ef="limit"><rect x="140" y="356" width="360" height="56"/><text x="160" y="392">제한</text></g>
+        <path class="dash" d="M300 104H476M300 160H476M300 216H476M300 272H476M300 328H476M300 384H476"/>
+      </g>
+      <!-- 콤보: 이펙트 여러 개를 하나로 묶는다 -->
+      <g data-on="14">
+        <g class="f"><rect x="20" y="60" width="210" height="64"/><text x="125" y="100" text-anchor="middle">이펙트 A</text></g>
+        <g class="f"><rect x="20" y="188" width="210" height="64"/><text x="125" y="228" text-anchor="middle">이펙트 B</text></g>
+        <g class="f"><rect x="20" y="316" width="210" height="64"/><text x="125" y="356" text-anchor="middle">이펙트 C</text></g>
+        <path class="ln" d="M230 92H300V220M230 220H392M230 348H300V220M384 214l8 6-8 6"/>
+        <g class="f hot"><rect x="400" y="178" width="220" height="84"/><text class="big" x="510" y="232" text-anchor="middle">콤보</text></g>
+        <text class="sm" x="510" y="300" text-anchor="middle">침식치는 모두 더한 값</text>
+      </g>
+    </svg>
+  </div>
+  <p class="caption" id="caption" aria-live="polite"></p>
+  <ol class="legs" id="legs" aria-label="이 페이지의 구간"></ol>
+</aside>
+
+<article class="text">
+  <section id="s1" data-step="0" data-cap="프리플레이. 세션을 시작하기 전의 준비입니다.">
+    <h2>한 세션의 흐름</h2>
+    <p>세션은 오프닝 페이즈에서 시작해 미들 페이즈, 클라이맥스 페이즈를 거쳐 엔딩 페이즈로 끝납니다. 클라이맥스가 끝나면 엔딩에 앞서 백트랙을 합니다.</p>
+    <p>이 장부터 6장까지는 한 명의 PC가 핸드아웃을 받아 세션에 참가하고, 일상으로 돌아오기까지를 이 순서대로 따라갑니다. 규칙은 그 규칙을 처음 쓰게 되는 순간에 설명합니다.</p>
+  </section>
+
+  <section id="s2" data-step="1" data-cap="핸드아웃에는 시나리오 로이스가 적혀 있습니다.">
+    <h2>시작 전: 핸드아웃</h2>
+    <p>세션 전에 PC별로 시나리오 도입 정보인 핸드아웃을 받습니다. 핸드아웃에 기재된 로이스가 시나리오 로이스입니다.</p>
+    <p>시나리오 로이스는 캐릭터가 사건에 관여하는 개인적인 이유입니다. 히로인, 라이벌, 사건의 피해자, 의뢰인 등 누구든 될 수 있으며, PC가 시나리오에 참가할 이유와 동기, 미스터리를 규명할 단서가 됩니다.</p>
+    <p>핸드아웃은 보통 아래와 같은 양식으로 한 장씩 받습니다. 한 플레이어가 받은 PC①의 핸드아웃입니다.</p>
+    <table class="handout">
+      <caption class="sr-only">PC①의 핸드아웃</caption>
+      <colgroup><col class="ho-k"><col><col class="ho-k"><col></colgroup>
+      <tr><th class="ho-pc" colspan="4" scope="colgroup">PC①</th></tr>
+      <tr><th scope="row">커버</th><td>고등학생</td><th scope="row">웍스</th><td>지정 없음</td></tr>
+      <tr><th scope="row">로이스</th><td colspan="3">나루세 미유</td></tr>
+      <tr><th scope="row">감정</th><td colspan="3"><span class="ho-em"><b>P</b>애정</span><span class="ho-sep">/</span><span class="ho-em"><b>N</b>불안</span></td></tr>
+      <tr><td class="ho-text" colspan="4">당신은 N시에 사는 평범한 고등학생이다. 나루세 미유는 당신에게 무엇과도 바꿀 수 없는 사람이다. 그날 저녁, 당신은 미유와 함께 N역 승강장에서 집으로 돌아가는 전철을 기다리고 있었다. 선로 건너편 어둠 속에서 ‘무언가’가 이쪽을 보고 있었다. 미유도 그것을 보았다. 그리고 그 순간, 당신의 안에서 알 수 없는 힘이 눈을 떴다.</td></tr>
+    </table>
+    <p>핸드아웃은 미유가 PC①에게 어떤 사람인지까지는 정하지 않습니다. 이 핸드아웃을 받은 플레이어는 미유를 여동생으로 두고, 바쁜 부모님을 대신해 동생을 챙겨 온 고등학생 나루세 하루카를 만들기로 했습니다.</p>
+    <p>다음 구간부터 하루카의 캐릭터 시트를 함께 채워 봅니다.</p>
+  </section>
+
+  <section id="s3" data-step="2" data-cap="이 칸들을 채우는 방법은 세 가지입니다.">
+    <h2>캐릭터 작성 방법</h2>
+    <ul class="plain">
+      <li><b>퀵스타트</b>샘플 캐릭터 중 하나를 고릅니다. 가장 빠른 방법입니다.</li>
+      <li><b>컨스트럭션</b>정해진 수의 이펙트를 고르고, 그중 일부의 레벨을 올립니다.</li>
+      <li><b>풀스크래치</b>경험점에 기반해 스스로 이펙트를 취득하고 레벨을 올립니다. 자유도가 가장 높으며, 대부분의 한국 더블크로스 플레이어들은 해당 방법으로 캐릭터를 작성하고 있습니다.</li>
+    </ul>
+    <p>구체적인 절차와 수치는 룰북에서 확인해 주십시오.</p>
+    <p>이 가이드는 캐릭터 시트의 순서를 따라 각 칸을 설명합니다.</p>
+    <div class="sheet-ex">
+      <p class="sheet-ex-h">하루카의 시트</p>
+      <dl><div><dt>작성 방법</dt><dd>풀스크래치. 이펙트를 직접 골라 하루카를 만듭니다.</dd></div></dl>
+    </div><!-- /sheet-ex -->
+  </section>
+
+  <section id="s4" data-step="3" data-cap="오버드로서 불리는 이름을 정합니다.">
+    <h2>이름과 코드네임</h2>
+    <p>캐릭터의 이름과 함께 코드네임을 정합니다. 코드네임은 오버드로서 불리는 이명으로, UGN이나 FH 같은 조직 안에서는 본명 대신 쓰이기도 합니다.</p>
+    <p>캐릭터의 능력이나 성격이 드러나는 코드네임을 붙이면 세션 중에 부르기도 좋습니다.</p>
+    <div class="sheet-ex">
+      <p class="sheet-ex-h">하루카의 시트</p>
+      <dl><div><dt>이름</dt><dd>나루세 하루카(成瀬 遥), 18세</dd></div><div><dt>코드네임</dt><dd>그레이 팽. 힘에 눈뜬 순간 짐승의 것으로 변한 팔에서 따온 이명입니다.</dd></div></dl>
+    </div><!-- /sheet-ex -->
+  </section>
+
+  <section id="s5" data-step="4" data-cap="입장과 세간의 직업은 달라도 됩니다.">
+    <h2>웍스와 커버</h2>
+    <p>웍스는 캐릭터의 입장이고, 커버는 세간에서 인지하는 캐릭터의 직업입니다.</p>
+    <p>둘이 일치할 필요는 없습니다. 겉으로는 초등학생이지만 사실은 탐정인 명탐정 코난 같은 캐릭터도 만들 수 있습니다.</p>
+    <div class="sheet-ex">
+      <p class="sheet-ex-h">하루카의 시트</p>
+      <dl><div><dt>웍스</dt><dd>고등학생. 고등학생의 신분 그대로 UGN에 협력합니다.</dd></div><div><dt>커버</dt><dd>고등학생</dd></div></dl>
+    </div><!-- /sheet-ex -->
+  </section>
+
+  <section id="s6" data-step="5" data-cap="어떤 능력을, 몇 계통 가지고 있는가">
+    <h2>신드롬과 브리드</h2>
+    <p>신드롬은 오버드가 쓰는 레니게이드를 능력별로 분류한 것으로, 정발 룰북 기준 12개, 일본 최신 서플리먼트 기준 15가지의 종류가 있습니다. PC는 이 중 최소 1개, 최대 3개를 조합해 캐릭터가 사용하는 능력의 방향성을 정할 수 있습니다.</p>
+    <p>어떤 계통이 있는지는 <a href="tool-syndrome.html">신드롬 조합 탐색</a>에서 둘러볼 수 있습니다.</p>
+    <p>브리드는 신드롬의 취득 개수에 따라 자동으로 결정됩니다.</p>
+    <ul class="plain">
+      <li><b>퓨어브리드</b>순혈종. 하나의 신드롬만을 가지고 있습니다.</li>
+      <li><b>크로스브리드</b>혼혈종. 두 개의 신드롬을 가지고 있습니다.</li>
+      <li><b>트라이브리드</b>삼종혼합종. 세 개의 신드롬을 가지고 있습니다.</li>
+    </ul>
+    <p>선택에 따라 이펙트 레벨의 상한이나 취득 제한 이펙트 취득 가능 등 작은 데이터 상의 차이가 있습니다.</p>
+    <div class="sheet-ex">
+      <p class="sheet-ex-h">하루카의 시트</p>
+      <dl><div><dt>신드롬</dt><dd>키마이라, 하누만</dd></div><div><dt>브리드</dt><dd>크로스브리드</dd></div><div><dt>고른 이유</dt><dd>힘에 눈뜬 순간 팔이 짐승의 것으로 변했다는 설정에서 키마이라를, 위험 앞에 누구보다 먼저 뛰어드는 성격에서 하누만을 골랐습니다.</dd></div></dl>
+    </div><!-- /sheet-ex -->
+  </section>
+
+  <section id="s7" data-step="6" data-cap="캐릭터가 지나온 삶입니다.">
+    <h2>라이프패스: 출생, 경험, 해후</h2>
+    <p>라이프패스는 캐릭터가 지나온 삶을 정하는 칸으로, 출생, 경험, 해후로 이루어집니다. 룰북의 표에서 굴리거나 골라서 정합니다.</p>
+    <ul class="plain">
+      <li><b>출생</b>어떤 집안과 환경에서 태어났는지를 정합니다.</li>
+      <li><b>경험</b>지금까지 겪은 중요한 일을 정합니다.</li>
+      <li><b>해후</b>살아오며 만난 중요한 인물을 정합니다.</li>
+    </ul>
+    <p>라이프패스의 결과는 캐릭터 설정의 실마리가 되고, 해후에서 만난 인물은 로이스로 맺을 수 있습니다.</p>
+    <div class="sheet-ex">
+      <p class="sheet-ex-h">하루카의 시트</p>
+      <dl><div><dt>출생</dt><dd>맞벌이 부모 아래에서 여동생 미유를 돌보며 자랐습니다.</dd></div><div><dt>경험</dt><dd>중학교 육상부에서 다리를 다쳐 달리기를 그만두었습니다.</dd></div><div><dt>해후</dt><dd>반 친구 아이하라 렌. 이 인물을 로이스로 맺습니다.</dd></div></dl>
+      <p class="sheet-ex-note">하루카의 라이프패스는 룰북의 표를 쓰지 않고 자유롭게 적었습니다. 룰북의 표를 쓰면 내용이 달라질 수 있습니다.</p>
+    </div><!-- /sheet-ex -->
+  </section>
+
+  <section id="s8" data-step="7" data-cap="어떻게 눈떴고, 무엇에 끌리는가.">
+    <h2>각성과 충동</h2>
+    <p>각성은 능력에 눈뜬 계기이고, 충동은 내면에서 끓어오르는 욕구입니다. 캐릭터가 어떻게 오버드가 되었고 무엇이 그를 위험하게 만드는지를 정해 줍니다.</p>
+    <p>세션을 시작할 때의 침식률은 각성과 충동으로 정해집니다.</p>
+    <div class="sheet-ex">
+      <p class="sheet-ex-h">하루카의 시트</p>
+      <dl><div><dt>각성</dt><dd>무지. 역에서 마주한 ‘무언가’가 계기였으리라고 어렴풋이 짐작할 뿐, 무엇이 자신을 깨웠는지는 알 수 없습니다.</dd></div><div><dt>충동</dt><dd>파괴</dd></div></dl>
+    </div><!-- /sheet-ex -->
+  </section>
+
+  <section id="s9" data-step="8" data-cap="능력치는 네 가지이고, 기능은 능력치에 딸려 있습니다.">
+    <h2>능력치와 기능치</h2>
+    <p>능력치는 육체, 감각, 정신, 사회 네 가지입니다. 몸을 쓰는 일, 살피고 겨누는 일, 생각하고 버티는 일, 사람을 움직이는 일에 각각 대응한다고 생각하면 쉽습니다.</p>
+    <p>능력치마다 그 능력치로 판정하는 기능이 딸려 있습니다. 예컨대 육체에는 〈백병〉과 〈회피〉, 감각에는 〈사격〉과 〈지각〉, 정신에는 〈RC〉와 〈의지〉, 사회에는 〈교섭〉과 〈정보〉가 있습니다.</p>
+    <p>능력치와 기능치는 신드롬 배분, 웍스 배분, 경험점 배분으로 정해집니다. 고른 신드롬이 능력치의 바탕을 나눠 주고, 웍스가 능력치와 기능을 더해 주며, 남은 경험점으로 원하는 곳을 올립니다. 그래서 같은 신드롬을 골라도 캐릭터마다 수치가 달라집니다.</p>
+    <p>판정할 때는 능력치만큼 다이스를 굴리고, 기능치(기능 레벨)를 달성치에 더합니다. 판정 방법은 가이드 4에서 자세히 설명합니다.</p>
+  </section>
+
+  <section id="s10" data-step="9" data-cap="늘 지니는 물건과 쓸 수 있는 자금입니다.">
+    <h2>재산 포인트와 상비화 포인트</h2>
+    <p>상비화 포인트는 캐릭터가 늘 지니고 다니는 무기, 방어구, 아이템을 마련하는 데 쓰는 포인트입니다. 쓰고 남은 상비화 포인트는 재산 포인트가 됩니다.</p>
+    <p>재산 포인트는 세션 중에 아이템을 구하거나, 정보수집 판정의 달성치를 높이는 데 씁니다. 정보수집에서의 쓰임은 가이드 4에서 설명합니다.</p>
+    <div class="sheet-ex">
+      <p class="sheet-ex-h">하루카의 시트</p>
+      <dl><div><dt>상비화 포인트</dt><dd>무기를 들지 않고 자신의 팔로 싸우므로 거의 쓰지 않습니다.</dd></div><div><dt>재산 포인트</dt><dd>남은 포인트를 정보수집에 씁니다.</dd></div></dl>
+    </div><!-- /sheet-ex -->
+  </section>
+
+  <section id="s11" data-step="10" data-cap="전투에서의 순서와 움직임입니다.">
+    <h2>행동치, 전투이동, 전력이동</h2>
+    <p>행동치는 전투에서 행동하는 순서를 정하는 값으로, 높을수록 먼저 행동합니다.</p>
+    <p>전투이동은 마이너 액션으로, 전력이동은 메이저 액션으로 움직일 수 있는 거리입니다. 전투의 흐름은 가이드 5에서 설명합니다.</p>
+    <p>셋 모두 능력치에서 계산합니다. 계산식은 룰북에서 확인해 주십시오.</p>
+  </section>
+
+  <section id="s12" data-step="11" data-cap="일상으로 이어지는 끈을 적는 칸입니다.">
+    <h2>로이스: 일상으로의 끈</h2>
+    <p>로이스는 인간 간의 유대를 나타내는 시스템적 장치로, PC의 삶에 있어 쉽게 바꿀 수 없는 이들을 이르는 단어입니다. PC가 그들을 향해 품는 감정과 생각을 통해 PC의 세계는 넓어집니다.</p>
+    <p>이는 단순히 RP적 장치일 뿐만 아니라, 늘 이성을 잠식해 오는 레니게이드와 충동의 위협으로부터 오버드를 지켜주는-즉, PC가 PC로 남을 수 있도록 해 주는 장치로써도 기능합니다. PC가 맺은 여러 인연이 PC를 인간으로 남을 수 있도록 세상에 붙들어 두는 것입니다.</p>
+    <p>로이스는 대상, 그리고 그 대상에 대한 긍정적 감정과 부정적 감정을 기입하여 취득할 수 있습니다. 취득 시, PC는 긍정적 감정/부정적 감정 중 하나를 택하여 표면적 감정으로 선택합니다. PC는 D로이스를 포함해 최대 7개의 로이스를 가질 수 있습니다.</p>
+    <p>캐릭터 시트를 작성할 때는 고정 로이스 3개와, 핸드아웃의 시나리오 로이스 1개를 가지고 시작합니다. 시나리오 로이스는 고정 로이스로 삼을 수 없습니다. 남은 세 칸의 로이스는 세션 중에 선언해서 취득할 수 있습니다.</p>
+    <p>취득 시 기입한 감정 자체는 세션 중에 바꿀 수 없습니다. 다만 겉으로 드러나는 감정은 긍정에서 부정으로, 부정에서 긍정으로 뒤집을 수 있습니다.</p>
+    <p>핸드아웃에 적힌 시나리오 로이스도 시트의 로이스 칸에 적습니다. 로이스가 세션에서 어떻게 쓰이는지는 가이드 5와 6에서 설명합니다.</p>
+    <div class="sheet-ex">
+      <p class="sheet-ex-h">하루카의 시트</p>
+      <dl><div><dt>고정 로이스 ①</dt><dd><span class="lo-line"><b>대상</b>아이하라 렌 (반 친구)</span><span class="lo-line"><b>감정</b>P 우정 / N 열등감 · 겉으로는 열등감</span><span class="lo-line"><b>관계</b>라이프패스의 해후에서 정한 인물입니다. 중학교 육상부 시절부터 함께 달린 친구로, 다리를 다쳐 그만둔 하루카와 달리 지금도 달리고 있습니다. 진심으로 응원하지만, 렌을 볼 때마다 마음 한구석이 쓰립니다.</span></dd></div><div><dt>고정 로이스 ②</dt><dd><span class="lo-line"><b>대상</b>타치바나 사키 (담임 선생님)</span><span class="lo-line"><b>감정</b>P 존경 / N 부담감 · 겉으로는 존경</span><span class="lo-line"><b>관계</b>집안 사정을 헤아려 진로 상담을 몇 번이고 다시 잡아 주는 담임입니다. 믿고 따르지만, 늘 걱정을 끼치는 것 같아 마음이 무겁습니다.</span></dd></div><div><dt>고정 로이스 ③</dt><dd><span class="lo-line"><b>대상</b>나루세 사오리 (어머니)</span><span class="lo-line"><b>감정</b>P 감사 / N 소외감 · 겉으로는 소외감</span><span class="lo-line"><b>관계</b>가족을 위해 밤늦게까지 일하는 어머니입니다. 고마운 마음은 알지만, 미유를 혼자 챙겨야 했던 날들이 쌓여 대화가 점점 줄었습니다.</span></dd></div><div><dt>시나리오 로이스</dt><dd><span class="lo-line"><b>대상</b>나루세 미유 (여동생)</span><span class="lo-line"><b>감정</b>P 애정 / N 불안 · 겉으로는 애정</span><span class="lo-line"><b>관계</b>핸드아웃에서 받은 로이스입니다. 바쁜 부모님을 대신해 하루카가 챙겨 온 동생으로, 하루카에게 가장 지키고 싶은 일상입니다. 역에서 함께 ‘무언가’를 본 뒤로, 미유에게도 무슨 일이 생기지 않을까 불안합니다.</span></dd></div></dl>
+    </div><!-- /sheet-ex -->
+  </section>
+
+  <section id="s13" data-step="12" data-cap="D로이스는 캐릭터 자체를 표현하는 로이스입니다.">
+    <h2>D로이스</h2>
+    <p>D로이스(디스크립트 로이스)는 다른 사람과의 인연이 아니라, 그 캐릭터 자체를 표현하는 로이스입니다. 누군가의 클론, 실험의 결과로 태어남, 누군가의 환생, 특수한 성질을 가진 발증자처럼 캐릭터가 지닌 설정을 데이터로도 표현할 수 있게 해 줍니다.</p>
+    <p>대신 일반적인 로이스와 달리 자원으로 쓸 수는 없습니다.</p>
+    <p>D로이스는 상급 룰북의 추가 룰입니다. 쓰지 않아도 플레이할 수 있으니, 처음이라면 GM에게 사용 여부를 물어보십시오.</p>
+    <p>D로이스를 쓰면 로이스 7칸 가운데 고정 로이스 3칸 중 하나를 D로이스에 씁니다. 그만큼 시트를 작성할 때 고르는 고정 로이스가 하나 줄어듭니다.</p>
+    <div class="sheet-ex">
+      <p class="sheet-ex-h">하루카의 시트</p>
+      <dl><div><dt>D로이스</dt><dd>이번에는 쓰지 않습니다.</dd></div></dl>
+    </div><!-- /sheet-ex -->
+  </section>
+
+  <section id="s14" data-step="13" data-cap="이펙트는 오버드의 능력 하나하나입니다.">
+    <h2>이펙트</h2>
+    <p>이펙트는 오버드가 쓰는 능력 하나하나입니다.</p>
+    <p>각 이펙트에는 언제 쓰는지(타이밍), 어떤 기능으로 판정하는지(기능), 판정의 난이도, 누구에게 쓰는지(대상), 어디까지 닿는지(사거리), 쓰면 침식률이 얼마나 오르는지(침식치), 침식률이 얼마 이상일 때 쓸 수 있는지(제한) 같은 항목이 적혀 있습니다. 다음 구간의 콤보는 이 항목들을 맞춰 가며 짭니다.</p>
+    <div class="efx">
+      <p class="efx-note">아래는 이 사이트가 지어낸 가상의 이펙트입니다. 칸을 누르면 그 항목이 무엇을 뜻하는지 나옵니다.</p>
+      <div class="efx-body">
+      <div class="efx-card">
+        <button type="button" class="efx-f efx-name" data-k="name" aria-pressed="false">잿빛 송곳니</button>
+        <div class="efx-grid">
+          <button type="button" class="efx-f wide" data-k="lv" aria-pressed="false"><b>최대 레벨:</b> 3</button>
+          <button type="button" class="efx-f wide" data-k="timing" aria-pressed="false"><b>타이밍:</b> 메이저 액션</button>
+          <button type="button" class="efx-f" data-k="skill" aria-pressed="false"><b>기능:</b> 〈백병〉</button>
+          <button type="button" class="efx-f" data-k="diff" aria-pressed="false"><b>난이도:</b> 대결</button>
+          <button type="button" class="efx-f" data-k="target" aria-pressed="false"><b>대상:</b> -</button>
+          <button type="button" class="efx-f" data-k="range" aria-pressed="false"><b>사거리:</b> -</button>
+          <button type="button" class="efx-f" data-k="cost" aria-pressed="false"><b>침식치:</b> 2</button>
+          <button type="button" class="efx-f" data-k="limit" aria-pressed="false"><b>제한:</b> -</button>
+          <button type="button" class="efx-f wide" data-k="effect" aria-pressed="false"><b>효과:</b> 팔을 회색 털로 뒤덮인 짐승의 것으로 바꾸어 내리치는 이펙트.<br>이 이펙트를 조합한 공격의 공격력을 +[LV×2]한다.</button>
+        </div>
+      </div>
+      <div class="efx-why" aria-live="polite"><p class="efx-why-h" id="efx-h">항목을 눌러 보십시오</p><p id="efx-t">이펙트 카드의 칸마다 무엇이 적혀 있는지 설명합니다.</p></div>
+      </div>
+    </div>
+    <div class="sheet-ex">
+      <p class="sheet-ex-h">하루카의 시트</p>
+      <dl><div><dt>키마이라</dt><dd>팔을 짐승의 것으로 바꾸어 싸우는 이펙트</dd></div><div><dt>하누만</dt><dd>빠르게 움직이고 반응하는 이펙트</dd></div></dl>
+    </div><!-- /sheet-ex -->
+  </section>
+
+  <section id="s15" data-step="14" data-cap="이펙트를 조합하면 콤보가 됩니다.">
+    <h2>콤보</h2>
+    <p>콤보는 이펙트를 조합해 한 번에 사용하는 기술입니다. 캐릭터의 설정에 맞는 전투 방향을 골라 여러 데이터를 섞은 콤보를 만들어내는 것은 이 룰의 큰 묘미 중 하나입니다.</p>
+    <p>콤보는 같은 타이밍에 쓰는 이펙트 여러 개를 하나로 묶어, 한 번의 행동으로 사용하는 것입니다. 예컨대 메이저 액션으로 공격하면서 다이스를 늘리는 이펙트, 크리티컬치를 낮추는 이펙트, 대미지를 높이는 이펙트를 함께 쓰는 식입니다.</p>
+    <p>콤보를 짤 때는 다음을 확인합니다.</p>
+    <ul class="plain">
+      <li><b>타이밍</b>묶는 이펙트는 타이밍이 모두 같아야 합니다. 타이밍이 메이저 액션인 이펙트는 메이저 액션 이펙트끼리만 묶을 수 있으며, 마이너 액션 이펙트와는 묶을 수 없습니다.</li>
+      <li><b>기능</b>판정에 쓰는 기능이 같아야 합니다. 〈사격〉 기능용 이펙트끼리는 묶을 수 있지만, 〈백병〉과 〈사격〉은 기본적으로 함께 쓸 수 없습니다. 단, 기능이 '신드롬'인 이펙트는 기능과 관계없이 같은 신드롬, 같은 타이밍의 이펙트와 묶을 수 있습니다.
+        <p class="combo-key"><span class="fx-syn">흰 칸</span>은 이펙트가 속한 신드롬, <span class="fx-sk">검은 칸</span>은 판정에 쓰는 기능입니다. X 탭은 조합할 수 없는 콤보, O 탭은 고친 콤보입니다.</p>
+        <div class="cases">
+        <div class="case" id="combo-cases">
+          <div class="case-head"><p class="case-no">사례</p><div class="seg seg-num" role="tablist" aria-label="사례 번호" style="--n:4;--i:0"><span class="seg-thumb" aria-hidden="true"></span><button type="button" role="tab" id="cc1-t" aria-controls="cc1" aria-selected="true">1</button><button type="button" role="tab" id="cc2-t" aria-controls="cc2" aria-selected="false" tabindex="-1">2</button><button type="button" role="tab" id="cc3-t" aria-controls="cc3" aria-selected="false" tabindex="-1">3</button><button type="button" role="tab" id="cc4-t" aria-controls="cc4" aria-selected="false" tabindex="-1">4</button></div></div>
+          <div class="case-item" role="tabpanel" id="cc1" aria-labelledby="cc1-t">
+            <div class="case-sub"><div class="seg seg-xo" role="tablist" aria-label="사례 1의 X와 O" style="--n:2;--i:0"><span class="seg-thumb" aria-hidden="true"></span><button type="button" role="tab" id="cc1-xt" aria-controls="cc1-x" aria-selected="true" aria-label="X, 조합할 수 없는 콤보">X</button><button type="button" role="tab" id="cc1-ot" aria-controls="cc1-o" aria-selected="false" aria-label="O, 고친 콤보" tabindex="-1">O</button></div></div>
+            <div class="case-panel" role="tabpanel" id="cc1-x" aria-labelledby="cc1-xt"><span class="fx-row"><span class="fx"><span class="fx-syn">엔젤 헤일로</span><span class="fx-sk">〈RC〉</span></span><span class="plus">+</span><span class="fx"><span class="fx-syn">엔젤 헤일로</span><span class="fx-sk">〈사격〉</span></span></span><p class="why">서로 다른 두 일반 기능(〈RC〉와 〈사격〉)을 사용하기 때문에 조합할 수 없습니다.</p></div>
+            <div class="case-panel" role="tabpanel" id="cc1-o" aria-labelledby="cc1-ot" hidden><span class="fx-row"><span class="fx"><span class="fx-syn">엔젤 헤일로</span><span class="fx-sk">〈RC〉</span></span><span class="plus">+</span><span class="fx"><span class="fx-syn">엔젤 헤일로</span><span class="fx-sk">〈RC〉</span></span></span><span class="or">또는</span><span class="fx-row"><span class="fx"><span class="fx-syn">엔젤 헤일로</span><span class="fx-sk">〈사격〉</span></span><span class="plus">+</span><span class="fx"><span class="fx-syn">엔젤 헤일로</span><span class="fx-sk">〈사격〉</span></span></span><p class="why">같은 일반 기능을 쓰는 서로 다른 이펙트끼리 묶어야 합니다. 〈RC〉는 〈RC〉끼리, 〈사격〉은 〈사격〉끼리 콤보를 작성합니다.</p></div>
+          </div>
+          <div class="case-item" role="tabpanel" id="cc2" aria-labelledby="cc2-t" hidden>
+            <div class="case-sub"><div class="seg seg-xo" role="tablist" aria-label="사례 2의 X와 O" style="--n:2;--i:0"><span class="seg-thumb" aria-hidden="true"></span><button type="button" role="tab" id="cc2-xt" aria-controls="cc2-x" aria-selected="true" aria-label="X, 조합할 수 없는 콤보">X</button><button type="button" role="tab" id="cc2-ot" aria-controls="cc2-o" aria-selected="false" aria-label="O, 고친 콤보" tabindex="-1">O</button></div></div>
+            <div class="case-panel" role="tabpanel" id="cc2-x" aria-labelledby="cc2-xt"><span class="fx-row"><span class="fx"><span class="fx-syn">엔젤 헤일로</span><span class="fx-sk">〈RC〉</span></span><span class="plus">+</span><span class="fx"><span class="fx-syn">발로르</span><span class="fx-sk">신드롬</span></span></span><p class="why">서로 다른 신드롬의 일반 기능 이펙트와 기능:신드롬 이펙트를 묶었기 때문에 조합할 수 없습니다.</p></div>
+            <div class="case-panel" role="tabpanel" id="cc2-o" aria-labelledby="cc2-ot" hidden><span class="fx-row"><span class="fx"><span class="fx-syn">엔젤 헤일로</span><span class="fx-sk">〈RC〉</span></span><span class="plus">+</span><span class="fx"><span class="fx-syn">엔젤 헤일로</span><span class="fx-sk">신드롬</span></span></span><p class="why">기능:신드롬 이펙트를 일반 기능 이펙트와 같은 신드롬(엔젤 헤일로)의 것으로 바꿔 콤보를 작성합니다.</p></div>
+          </div>
+          <div class="case-item" role="tabpanel" id="cc3" aria-labelledby="cc3-t" hidden>
+            <div class="case-sub"><div class="seg seg-xo" role="tablist" aria-label="사례 3의 X와 O" style="--n:2;--i:0"><span class="seg-thumb" aria-hidden="true"></span><button type="button" role="tab" id="cc3-xt" aria-controls="cc3-x" aria-selected="true" aria-label="X, 조합할 수 없는 콤보">X</button><button type="button" role="tab" id="cc3-ot" aria-controls="cc3-o" aria-selected="false" aria-label="O, 고친 콤보" tabindex="-1">O</button></div></div>
+            <div class="case-panel" role="tabpanel" id="cc3-x" aria-labelledby="cc3-xt"><span class="fx-row"><span class="fx"><span class="fx-syn">엔젤 헤일로</span><span class="fx-sk">신드롬</span></span><span class="plus">+</span><span class="fx"><span class="fx-syn">엔젤 헤일로</span><span class="fx-sk">신드롬</span></span></span><p class="why">기능:신드롬은 그 자체로는 판정에 쓰는 기능이 될 수 없기 때문에 조합할 수 없습니다.</p></div>
+            <div class="case-panel" role="tabpanel" id="cc3-o" aria-labelledby="cc3-ot" hidden><span class="fx-row"><span class="fx"><span class="fx-syn">엔젤 헤일로</span><span class="fx-sk">〈RC〉</span></span><span class="plus">+</span><span class="fx"><span class="fx-syn">엔젤 헤일로</span><span class="fx-sk">신드롬</span></span></span><p class="why">최소한 하나의 일반 기능 이펙트를 포함한 콤보로 고칩니다.</p></div>
+          </div>
+          <div class="case-item" role="tabpanel" id="cc4" aria-labelledby="cc4-t" hidden>
+            <div class="case-sub"><div class="seg seg-xo" role="tablist" aria-label="사례 4의 X와 O" style="--n:2;--i:0"><span class="seg-thumb" aria-hidden="true"></span><button type="button" role="tab" id="cc4-xt" aria-controls="cc4-x" aria-selected="true" aria-label="X, 조합할 수 없는 콤보">X</button><button type="button" role="tab" id="cc4-ot" aria-controls="cc4-o" aria-selected="false" aria-label="O, 고친 콤보" tabindex="-1">O</button></div></div>
+            <div class="case-panel" role="tabpanel" id="cc4-x" aria-labelledby="cc4-xt"><span class="fx-row"><span class="fx"><span class="fx-syn">엔젤 헤일로</span><span class="fx-sk">신드롬</span></span><span class="plus">+</span><span class="fx"><span class="fx-syn">발로르</span><span class="fx-sk">신드롬</span></span></span><p class="why">이 역시 기능:신드롬만으로는 판정에 쓰는 기능이 없기 때문에 조합할 수 없습니다.</p></div>
+            <div class="case-panel" role="tabpanel" id="cc4-o" aria-labelledby="cc4-ot" hidden><span class="fx-row"><span class="fx"><span class="fx-syn">엔젤 헤일로</span><span class="fx-sk">〈RC〉</span></span><span class="plus">+</span><span class="fx"><span class="fx-syn">엔젤 헤일로</span><span class="fx-sk">신드롬</span></span><span class="plus">+</span><span class="fx"><span class="fx-syn">발로르</span><span class="fx-sk">〈RC〉</span></span><span class="plus">+</span><span class="fx"><span class="fx-syn">발로르</span><span class="fx-sk">신드롬</span></span></span><p class="why">각 신드롬에서 같은 일반 기능(〈RC〉)을 쓰는 이펙트를 하나씩 취득해, 함께 묶어 콤보를 작성합니다.</p></div>
+          </div>
+        </div>
+        <div class="quiz case" id="combo-quiz">
+          <div class="case-head"><div class="case-title"><p class="case-no">연습 문제</p><p class="quiz-lead">기능만 보고 이 콤보를 짤 수 있는지 고르십시오. 다른 조건은 모두 맞는다고 가정합니다.</p></div><div class="seg seg-num" role="tablist" aria-label="연습 문제 번호" style="--n:6;--i:0"><span class="seg-thumb" aria-hidden="true"></span><button type="button" role="tab" aria-selected="true" aria-controls="quiz-card">1</button><button type="button" role="tab" aria-selected="false" tabindex="-1" aria-controls="quiz-card">2</button><button type="button" role="tab" aria-selected="false" tabindex="-1" aria-controls="quiz-card">3</button><button type="button" role="tab" aria-selected="false" tabindex="-1" aria-controls="quiz-card">4</button><button type="button" role="tab" aria-selected="false" tabindex="-1" aria-controls="quiz-card">5</button><button type="button" role="tab" aria-selected="false" tabindex="-1" aria-controls="quiz-card">6</button></div></div>
+          <div class="quiz-card" id="quiz-card" role="tabpanel"></div>
+        </div>
+        </div>
+      </li>
+      <li><b>대상</b>대상이 서로 다른 이펙트를 묶으면 가장 좁은 범위를 따릅니다. 대상이 적혀 있지 않은 이펙트는 단일 대상으로 봅니다. 예컨대 범위(선택) 이펙트와 단일 대상 이펙트를 묶으면 단일 대상 콤보가 됩니다. 단, 이펙트의 효과가 범위를 넓히는 경우에는 그 효과를 우선합니다.</li>
+      <li><b>난이도</b>난이도가 자동성공인 이펙트는 자동성공 이펙트끼리, 대결인 이펙트는 대결 이펙트끼리만 묶을 수 있습니다.</li>
+      <li><b>제한</b>콤보는 제한이 가장 엄격한 이펙트를 따릅니다. 예컨대 80% 제한 이펙트와 100% 제한 이펙트를 묶으면, 침식률이 100% 이상이 되어야 그 콤보를 쓸 수 있습니다.</li>
+      <li><b>중복</b>같은 이펙트를 한 콤보에 두 번 넣을 수는 없습니다.</li>
+      <li><b>침식치</b>콤보의 침식치는 들어간 이펙트의 침식치를 모두 더한 값입니다.</li>
+    </ul>
+    <div class="sheet-ex">
+      <p class="sheet-ex-h">하루카의 시트</p>
+      <dl><div><dt>콤보 이름</dt><dd>지키는 손</dd></div><div><dt>조합</dt><dd><span class="fx-row"><span class="fx"><span class="fx-syn">키마이라</span><span class="fx-sk">〈백병〉</span></span><span class="plus">+</span><span class="fx"><span class="fx-syn">하누만</span><span class="fx-sk">〈백병〉</span></span><span class="plus">+</span><span class="fx"><span class="fx-syn">키마이라</span><span class="fx-sk">신드롬</span></span></span></dd></div><div><dt>조합할 수 있는 이유</dt><dd>모두 메이저 액션 이펙트이고, 같은 일반 기능(〈백병〉)으로 묶이며, 기능:신드롬 이펙트가 콤보에 들어 있는 키마이라의 것입니다.</dd></div></dl>
+    </div><!-- /sheet-ex -->
+    <p>강한 콤보일수록 한 번에 침식률이 크게 오릅니다. 그래서 침식률이 낮을 때 쓸 가벼운 콤보와 클라이맥스에서 쓸 강한 콤보를 나눠 두는 경우가 많습니다.</p>
+    <p>캐릭터 시트에는 콤보마다 이름과 들어간 이펙트, 타이밍, 기능, 침식치를 적어 두면 세션 중에 빠르게 쓸 수 있습니다. 캐릭터다운 이름을 붙이는 것도 콤보의 즐거움 중 하나입니다. 자세한 조합 규칙은 룰북에서 확인해 주십시오.</p>
+  </section>
+<nav class="pager" aria-label="이전과 다음 가이드"><a href="guide-1.html">이전: 세계관</a><a href="guide-3.html">다음: 오프닝 페이즈</a></nav></article>
+
+</main>
+<footer class="site-foot"><p>비공식 팬 사이트입니다. 야노 슌사쿠와 유한회사 F.E.A.R.이 권리를 가진 『더블크로스 The 3rd Edition』의 2차 창작물입니다.</p><p><a href="about.html">사이트 안내</a> <a href="glossary.html">용어집</a></p></footer>
+
+<script src="assets/menu.js"></script>
+<script src="assets/site.js"></script>
+<script>
+(function () {
+  // 세그먼트 탭: 선택한 칸으로 흰 표시가 미끄러진다
+  const moveThumb = (seg, i) => seg.style.setProperty('--i', i);
+
+  // 사례 카드: 1~4 번호 탭으로 사례를, 사례 안의 X/O 탭으로 조합할 수 없는 콤보와 고친 콤보를 오간다
+  document.querySelectorAll('#combo-cases .seg').forEach(seg => {
+    const tabs = [...seg.querySelectorAll('[role=tab]')];
+    const select = t => tabs.forEach((x, i) => {
+      const on = x === t;
+      x.setAttribute('aria-selected', on);
+      x.tabIndex = on ? 0 : -1;
+      document.getElementById(x.getAttribute('aria-controls')).hidden = !on;
+      if (on) moveThumb(seg, i);
+    });
+    tabs.forEach((t, i) => {
+      t.addEventListener('click', () => select(t));
+      t.addEventListener('keydown', e => {
+        if (e.key !== 'ArrowRight' && e.key !== 'ArrowLeft') return;
+        e.preventDefault();
+        const n = tabs[(i + (e.key === 'ArrowRight' ? 1 : -1) + tabs.length) % tabs.length];
+        select(n); n.focus();
+      });
+    });
+  });
+
+  // 연습 문제: 한 번에 한 문제만 보여 주고, 답하면 같은 자리에 다음 문제가 온다
+  const QUIZ = [{"html":"<span class=\"fx-row\"><span class=\"fx\"><span class=\"fx-syn\">발로르</span><span class=\"fx-sk\">〈백병〉</span></span><span class=\"plus\">+</span><span class=\"fx\"><span class=\"fx-syn\">발로르</span><span class=\"fx-sk\">신드롬</span></span></span>","ok":true,"why":"같은 신드롬(발로르)의 일반 기능 이펙트와 기능:신드롬 이펙트이므로 조합할 수 있습니다."},{"html":"<span class=\"fx-row\"><span class=\"fx\"><span class=\"fx-syn\">엔젤 헤일로</span><span class=\"fx-sk\">〈사격〉</span></span><span class=\"plus\">+</span><span class=\"fx\"><span class=\"fx-syn\">엔젤 헤일로</span><span class=\"fx-sk\">〈백병〉</span></span></span>","ok":false,"why":"서로 다른 두 일반 기능(〈사격〉과 〈백병〉)을 쓰므로 조합할 수 없습니다."},{"html":"<span class=\"fx-row\"><span class=\"fx\"><span class=\"fx-syn\">엔젤 헤일로</span><span class=\"fx-sk\">〈사격〉</span></span><span class=\"plus\">+</span><span class=\"fx\"><span class=\"fx-syn\">발로르</span><span class=\"fx-sk\">〈사격〉</span></span></span>","ok":true,"why":"신드롬은 달라도 같은 일반 기능(〈사격〉)을 쓰므로 조합할 수 있습니다."},{"html":"<span class=\"fx-row\"><span class=\"fx\"><span class=\"fx-syn\">발로르</span><span class=\"fx-sk\">신드롬</span></span><span class=\"plus\">+</span><span class=\"fx\"><span class=\"fx-syn\">발로르</span><span class=\"fx-sk\">신드롬</span></span></span>","ok":false,"why":"기능:신드롬만으로는 판정에 쓰는 기능이 없으므로 조합할 수 없습니다."},{"html":"<span class=\"fx-row\"><span class=\"fx\"><span class=\"fx-syn\">엔젤 헤일로</span><span class=\"fx-sk\">〈RC〉</span></span><span class=\"plus\">+</span><span class=\"fx\"><span class=\"fx-syn\">발로르</span><span class=\"fx-sk\">〈RC〉</span></span><span class=\"plus\">+</span><span class=\"fx\"><span class=\"fx-syn\">엔젤 헤일로</span><span class=\"fx-sk\">신드롬</span></span></span>","ok":true,"why":"같은 일반 기능(〈RC〉)으로 묶여 있고, 기능:신드롬 이펙트가 콤보에 들어 있는 신드롬(엔젤 헤일로)의 것이므로 조합할 수 있습니다."},{"html":"<span class=\"fx-row\"><span class=\"fx\"><span class=\"fx-syn\">발로르</span><span class=\"fx-sk\">〈RC〉</span></span><span class=\"plus\">+</span><span class=\"fx\"><span class=\"fx-syn\">엔젤 헤일로</span><span class=\"fx-sk\">신드롬</span></span></span>","ok":false,"why":"기능:신드롬 이펙트(엔젤 헤일로)와 같은 신드롬의 일반 기능 이펙트가 콤보에 없으므로 조합할 수 없습니다."}];
+  const box = document.getElementById('combo-quiz'), card = document.getElementById('quiz-card');
+  const nseg = box.querySelector('.seg'), nums = [...nseg.querySelectorAll('[role=tab]')];
+  const picked = QUIZ.map(() => null);
+  let cur = 0;
+
+  function show(i) {
+    cur = i;
+    nums.forEach((b, k) => { b.setAttribute('aria-selected', k === i); b.tabIndex = k === i ? 0 : -1; });
+    moveThumb(nseg, i);
+    const q = QUIZ[i], p = picked[i];
+    card.innerHTML = `${q.html}
+      <div class="seg seg-choose" role="group" aria-label="조합할 수 있는지 고르기" style="--n:2;--i:${p === null ? 0 : p ? 0 : 1}"><span class="seg-thumb" aria-hidden="true"></span><button type="button" data-a="true" aria-pressed="${p === true}" aria-label="O, 조합할 수 있다">O</button><button type="button" data-a="false" aria-pressed="${p === false}" aria-label="X, 조합할 수 없다">X</button></div>
+      <p class="quiz-why" aria-live="polite"></p>
+      <div class="quiz-foot"></div>`;
+    const choose = card.querySelector('.seg-choose');
+    choose.querySelectorAll('button').forEach((b, k) => b.addEventListener('click', () => {
+      picked[i] = b.dataset.a === 'true';
+      choose.querySelectorAll('button').forEach(x => x.setAttribute('aria-pressed', x === b));
+      moveThumb(choose, k);
+      choose.classList.add('picked');
+      result();
+    }));
+    if (p !== null) { choose.classList.add('picked'); result(); }
+  }
+
+  function result() {
+    const q = QUIZ[cur], p = picked[cur], right = p === q.ok;
+    card.querySelector('.quiz-why').innerHTML = `<b>${right ? '정답입니다.' : `오답입니다. 정답은 ${q.ok ? 'O' : 'X'}입니다.`}</b> ${q.why}`;
+    nums[cur].dataset.done = right ? 'right' : 'wrong';
+    const foot = card.querySelector('.quiz-foot');
+    const next = QUIZ.findIndex((_, k) => k > cur && picked[k] === null);
+    const left = picked.filter(x => x === null).length;
+    if (left) {
+      foot.innerHTML = '<button type="button" class="btn solid">다음 문제</button>';
+      foot.querySelector('button').addEventListener('click', () => show(next >= 0 ? next : picked.indexOf(null)));
+    } else {
+      const score = picked.filter((x, k) => x === QUIZ[k].ok).length;
+      foot.innerHTML = `<p class="quiz-score">${QUIZ.length}문제 중 ${score}문제를 맞혔습니다.</p><button type="button" class="btn">처음부터 다시 풀기</button>`;
+      foot.querySelector('button').addEventListener('click', () => {
+        picked.fill(null);
+        nums.forEach(b => { delete b.dataset.done; });
+        show(0);
+      });
+    }
+  }
+
+  nums.forEach((b, i) => {
+    b.addEventListener('click', () => show(i));
+    b.addEventListener('keydown', e => {
+      if (e.key !== 'ArrowRight' && e.key !== 'ArrowLeft') return;
+      e.preventDefault();
+      const n = (i + (e.key === 'ArrowRight' ? 1 : -1) + nums.length) % nums.length;
+      show(n); nums[n].focus();
+    });
+  });
+  show(0);
+
+  GuideStage();
+})();
+</script>
+<script>
+(function () {
+  // 이펙트 카드: 누른 칸의 뜻을 아래에 보여 주고, 오른쪽 그림의 같은 줄을 켠다
+  const WHY = {
+    name: ['이펙트 이름', '이펙트를 부르는 이름입니다. 콤보를 짤 때는 이 이름으로 이펙트를 골라 묶습니다.'],
+    lv: ['최대 레벨', '이 이펙트를 올릴 수 있는 가장 높은 레벨입니다. 효과에 적힌 LV에는 지금의 레벨이 들어갑니다. 침식률이 오르면 이펙트의 레벨이 더 오르기도 합니다(가이드 5).'],
+    timing: ['타이밍', '이 이펙트를 쓰는 때입니다. 메이저 액션, 마이너 액션, 리액션, 오토 액션 등이 있고, 콤보는 타이밍이 같은 이펙트끼리만 묶을 수 있습니다. 이 예시는 메이저 액션으로 하는 공격에 씁니다.'],
+    skill: ['기능', '판정에 쓰는 기능입니다. 〈백병〉, 〈회피〉 같은 일반 기능이나 신드롬이 적힙니다. 콤보는 판정에 쓰는 기능이 같아야 하므로, 이 이펙트는 〈백병〉 이펙트나 같은 신드롬의 기능:신드롬 이펙트와 묶을 수 있습니다.'],
+    diff: ['난이도', '판정의 난이도입니다. 자동성공, 대결 등이 적힙니다. 대결은 상대와 달성치를 겨루는 판정이라는 뜻입니다. -는 이 이펙트가 따로 정하지 않고, 조합한 판정의 것을 따른다는 뜻입니다.'],
+    target: ['대상', '누구에게 쓰는지입니다. 자신, 단일, 범위 등이 적힙니다. -는 조합한 판정의 것을 따른다는 뜻이며, 이 이펙트만 단독으로 쓸 때는 가장 적은 대상을 대상으로 합니다. 콤보에서는 가장 좁은 대상을 따릅니다.'],
+    range: ['사거리', '어디까지 닿는지입니다. -는 조합한 판정의 것을 따른다는 뜻이며, 이 이펙트만 단독으로 쓸 때는 가장 짧은 사거리를 대상으로 합니다.'],
+    cost: ['침식치', '이 이펙트를 쓰면 침식률이 오르는 양입니다. 콤보의 침식치는 들어간 이펙트의 침식치를 모두 더한 값입니다.'],
+    limit: ['제한', '이 이펙트를 쓸 수 있는 조건입니다. 침식률이 일정 수치 이상일 때만 쓸 수 있는 이펙트 등이 있으며, -는 제한이 없다는 뜻입니다.'],
+    effect: ['효과', '이 이펙트가 하는 일입니다. 앞부분은 능력의 묘사이고, 뒷부분이 데이터입니다. 이 예시는 공격력을 높여 상대에게 주는 대미지를 늘립니다. LV에는 이 이펙트의 지금 레벨이 들어갑니다.']
+  };
+  const fields = [...document.querySelectorAll('.efx-f')], rows = [...document.querySelectorAll('[data-ef]')];
+  const h = document.getElementById('efx-h'), t = document.getElementById('efx-t');
+  fields.forEach(b => b.addEventListener('click', () => {
+    const k = b.dataset.k;
+    fields.forEach(x => x.setAttribute('aria-pressed', x === b));
+    h.textContent = WHY[k][0]; t.textContent = WHY[k][1];
+    rows.forEach(r => r.classList.toggle('hot', r.dataset.ef === k));
+  }));
+})();
+</script>
+</body>
+</html>
